@@ -2,7 +2,7 @@ import { Outlet } from 'react-router-dom';
 import Header from './components/Header.jsx';
 import Footer from './components/Footer.jsx';
 
-function App() {
+export default function App() {
     return (
         <div>
             <Header />
@@ -11,5 +11,3 @@ function App() {
         </div>
     );
 }
-
-export default App;
