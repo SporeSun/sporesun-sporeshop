@@ -197,10 +197,10 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Neil Holloway - [@twitter_handle](https://twitter.com/SporeSunEnt) - sporesun@protonmail.com
-Devin Amlen - [@twitter_handle](https://twitter.com/twitter_handle) - email@email_client.com
-Cristian Reyes - [@twitter_handle](https://twitter.com/twitter_handle) - email@email_client.com
-Motty Mandel - [@twitter_handle](https://twitter.com/twitter_handle) - email@email_client.com
+* Neil Holloway - [@twitter_handle](https://twitter.com/SporeSunEnt) - sporesun@protonmail.com
+* Devin Amlen - [@twitter_handle](https://twitter.com/twitter_handle) - email@email_client.com
+* Cristian Reyes - [@twitter_handle](https://twitter.com/twitter_handle) - email@email_client.com
+* Motty Mandel - [@twitter_handle](https://twitter.com/twitter_handle) - email@email_client.com
 
 Project Link: [https://github.com/SporeSun/sporesun-sporeshop](https://github.com/SporeSun/sporesun-sporeshop)
 
