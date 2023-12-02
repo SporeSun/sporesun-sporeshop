@@ -20,5 +20,10 @@ const cartSchema = new Schema(
     },
   }
 );
+cartSchema.virtual('totalCost').get(function () {
+  var sum = 0;
+  this.contents.map((t) => sum += t.cost);
+  return sum;
+});
 
 module.exports = cartSchema;
