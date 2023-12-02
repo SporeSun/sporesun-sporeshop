@@ -3,10 +3,17 @@ const bcrypt = require('bcrypt');
 
 const itemSchema = new Schema(
   {
-    username: {
+    name: {
       type: String,
       required: true,
       unique: true,
+    },
+    description: {
+      type: String,
+      required: true,
+    },
+    image: {
+      type: String,
     },
   },
   // set this to use virtual below

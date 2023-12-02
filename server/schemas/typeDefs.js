@@ -2,7 +2,7 @@ const typeDefs = `
   type Category {
     _id: ID
     displayName: String!
-    products: String
+    products: [Product]
 
   }
 

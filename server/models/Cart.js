@@ -1,13 +1,17 @@
 const { Schema, model } = require('mongoose');
 const bcrypt = require('bcrypt');
 
+const User = require('./User');
+const prePurchaseSchema = require('./PrePurchase');
+
 const cartSchema = new Schema(
   {
-    username: {
-      type: String,
-      required: true,
-      unique: true,
+    owner: {
+      type: User,
     },
+    contents:{
+      type: [prePurchaseSchema],
+    }
   },
   // set this to use virtual below
   {

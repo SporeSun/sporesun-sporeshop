@@ -1,25 +1,34 @@
 const { Schema, model } = require('mongoose');
 const bcrypt = require('bcrypt');
+const User = require('./User');
+const cartSchema = require('./Cart');
 
 const transactionSchema = new Schema(
   {
-    username: {
-      type: String,
-      required: true,
-      unique: true,
-    },
-    email: {
-      type: String,
-      required: true,
-      unique: true,
-      match: [/.+@.+\..+/, 'Must use a valid email address'],
-    },
-    password: {
+    date: {
       type: String,
       required: true,
     },
-    // set savedBooks to be an array of data that adheres to the bookSchema
-    savedBooks: [bookSchema],
+    status: {
+      type: String,
+      required: true,
+    },
+    buyer: {
+      type: User,
+      required: true,
+    },
+    seller: {
+      type: User,
+      required: true,
+    },
+    items: {
+      type: cartSchema,
+      required: true,
+    },
+    cost: {
+      type: Float,
+      required: true,
+    },
   },
   // set this to use virtual below
   {
