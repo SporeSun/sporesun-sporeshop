@@ -2,24 +2,24 @@ import React from 'react';
 import "./header.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
-import { Box, Heading, Flex, Spacer, Icon, IconButton, Menu, MenuButton, MenuList, MenuItem } from '@chakra-ui/react';
+import { Box, Heading, Flex, Spacer, Image, Icon, IconButton, Menu, MenuButton, MenuList, MenuItem } from '@chakra-ui/react';
 import { AddIcon, ExternalLinkIcon, RepeatIcon, EditIcon, HamburgerIcon } from '@chakra-ui/icons';
 
 const Header = () => {
     return (
-        <Box bg="purple" p={10} color="white">
+        <Box bg="purple" p={2} color="white">
             <Flex>
-                <Heading size="md">My logo</Heading>
+                <Image src="https://i.imgur.com/4IjYbdj.png" alt="logo" objectFit="cover" maxW="100px"/>
                 <Spacer />
-                <Heading size="md">Your Logo</Heading>
+                <Heading size="md" pt={7}>SPORES'N'MORE</Heading>
                 <Spacer />
-                <Menu>
+                <Menu pt={7}>
                     <MenuButton
                         as={IconButton}
                         aria-label='Options'
                         icon={<HamburgerIcon />}
                         mx={20}
-                       
+                        my={6}
                     />
                     <MenuList>
                         <MenuItem icon={<AddIcon />} command='⌘T'>
@@ -37,7 +37,7 @@ const Header = () => {
                     </MenuList>
                 </Menu>
                 <Box cursor="pointer">
-                    <Icon size="xl" as={FontAwesomeIcon} icon={faShoppingCart} />
+                    <Icon size="xl" as={FontAwesomeIcon} icon={faShoppingCart} pt={7} pr={5}/>
                 </Box>
             </Flex>
         </Box>
