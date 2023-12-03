@@ -70,11 +70,28 @@ const typeDefs = `
   }
 
   type Query {
-
+    getUser(userId: String!): User
+    getItem(id: String!): Item
+    getItems: [Item]
+    getCategory(id: String!): Category
+    getCategories: [Category]
+    getTransaction(id: String!): Transaction
+    getTransactions: [Transaction]
+    getProduct(id: String!): Product
+    getProducts: [Product]
   }
 
   type Mutation {
-
+    login(email: String!, password: String!): Auth
+    addUser(username: String!, email: String!, password: String!): Auth
+    makeAdmin(userId: String!): User
+    addItem(name: String!): Item
+    removeItem(itemId: String!): Item
+    addCategory(name: String!): Category
+    removeCategory(catId: String!): Category
+    addTransaction(buyer: User!, seller: User!, cart: Cart!): Transaction
+    addProduct(item: Item!, stock: Int, price: Float): Product
+    removeProduct(productId: String!): Item
   }
 `;
 
