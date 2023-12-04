@@ -97,6 +97,9 @@ const resolvers = {
         _id: id
       });
     },
+    createPrePurchase: async(parent, {productId, amount}) =>{
+      return await PrePurchase.create({productId, amount})
+    }
   },
 };
 
