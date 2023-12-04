@@ -87,12 +87,17 @@ const typeDefs = `
     addUser(username: String!, email: String!, password: String!): Auth
     makeAdmin(userId: String!): User
     addItem(name: String!): Item
+    updateItem(): Item
     removeItem(itemId: String!): Item
     addCategory(name: String!): Category
+    updateCategory(): Category
+    addToCategory(category: Category!, product: Product!): Category
     removeCategory(catId: String!): Category
     addTransaction(buyer: User!, seller: User!, cart: Cart!): Transaction
     addProduct(item: Item!, stock: Int, price: Float): Product
+    updateProduct(): Product
     removeProduct(productId: String!): Item
+    createPrePurchase(): PrePurchase
   }
 `;
 
