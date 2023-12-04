@@ -7,8 +7,8 @@ const typeDefs = `
   }
 
   type PrePurchase {
-    item: Item
     product: Product
+    cost: Float
     amount: Int
   }
 
@@ -17,10 +17,6 @@ const typeDefs = `
     parent: Item!
     price: Float!
     stock: Int!
-  }
-
-  type Item {
-    _id: ID
     name: String!
     description: String
     image: String

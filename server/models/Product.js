@@ -4,9 +4,17 @@ const Item = require('./Item');
 
 const productSchema = new Schema(
   {
-    parent: {
-      type: Item,
+    name: {
+      type: String,
       required: true,
+    },
+    
+    description: {
+      type: String,
+    },
+    
+    image: {
+      type: String,
     },
     
     price: {
