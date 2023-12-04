@@ -79,7 +79,6 @@ const typeDefs = `
   type Mutation {
     login(email: String!, password: String!): Auth
     addUser(username: String!, email: String!, password: String!): Auth
-    makeAdmin(userId: String!): User
     addCategory(name: String!): Category
     updateCategory(): Category
     addToCategory(category: Category!, product: Product!): Category

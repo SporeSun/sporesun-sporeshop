@@ -67,6 +67,24 @@ const resolvers = {
       const token = signToken(user);
       return { token, user };
     },
+    addCategory: async(parent, {name})=>{
+      return await Category.create({name});
+    },
+    addToCategory: async(parent, {categoryId, product})=>{
+      return await Category.findOneAndUpdate(
+        {_id: categoryId},
+        {$addToSet: {products: product}},
+        {new: true}
+        );
+    },
+    
+    removeFromCategory: async(parent, {categoryId, productId})=>{
+      return await Category.findOneAndUpdate(
+        {_id: categoryId},
+        {$pull: {products: productId}},
+        {new: true}
+        );
+    },
   },
 };
 
