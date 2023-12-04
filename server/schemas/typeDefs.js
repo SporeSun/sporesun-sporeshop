@@ -40,15 +40,6 @@ const typeDefs = `
     isAdmin: Boolean
 
   }
-
-  type Store {
-    displayName: String
-    owner: User
-    transactionHistory: [Transaction]
-    categories: [Category]
-    stock: [Product]
-  }
-
   type Transaction {
     _id: ID!
     date: String!

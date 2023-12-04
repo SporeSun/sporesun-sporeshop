@@ -70,6 +70,11 @@ const resolvers = {
     addCategory: async(parent, {name})=>{
       return await Category.create({name});
     },
+    removeCategory: async(parent, {id})=>{
+      return await Category.findOneAndDelete({
+        _id: id
+      });
+    },
     addToCategory: async(parent, {categoryId, product})=>{
       return await Category.findOneAndUpdate(
         {_id: categoryId},
@@ -77,13 +82,20 @@ const resolvers = {
         {new: true}
         );
     },
-    
     removeFromCategory: async(parent, {categoryId, productId})=>{
       return await Category.findOneAndUpdate(
         {_id: categoryId},
         {$pull: {products: productId}},
         {new: true}
         );
+    },
+    addProduct: async(parent, {name, description, image, stock, price})=>{
+      return await Product.create({name, description, image, stock, price});
+    },
+    removeProduct: async(parent, {id})=>{
+      return await Product.findOneAndDelete({
+        _id: id
+      });
     },
   },
 };
