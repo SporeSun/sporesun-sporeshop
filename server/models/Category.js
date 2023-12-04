@@ -1,25 +1,16 @@
 const { Schema, model } = require('mongoose');
 const bcrypt = require('bcrypt');
+const productSchema = require('./Product');
 
 const categorySchema = new Schema(
   {
-    username: {
+    displayName: {
       type: String,
       required: true,
       unique: true,
-    },
-    email: {
-      type: String,
-      required: true,
-      unique: true,
-      match: [/.+@.+\..+/, 'Must use a valid email address'],
-    },
-    password: {
-      type: String,
-      required: true,
     },
     // set savedBooks to be an array of data that adheres to the bookSchema
-    savedBooks: [bookSchema],
+    products: [productSchema],
   },
   // set this to use virtual below
   {

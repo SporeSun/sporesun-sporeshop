@@ -2,13 +2,13 @@ const typeDefs = `
   type Category {
     _id: ID
     displayName: String!
-    products: String
+    products: [Product]
 
   }
 
   type PrePurchase {
-    item: Item
     product: Product
+    cost: Float
     amount: Int
   }
 
@@ -17,10 +17,6 @@ const typeDefs = `
     parent: Item!
     price: Float!
     stock: Int!
-  }
-
-  type Item {
-    _id: ID
     name: String!
     description: String
     image: String
@@ -44,15 +40,6 @@ const typeDefs = `
     isAdmin: Boolean
 
   }
-
-  type Store {
-    displayName: String
-    owner: User
-    transactionHistory: [Transaction]
-    categories: [Category]
-    stock: [Product]
-  }
-
   type Transaction {
     _id: ID!
     date: String!
@@ -70,11 +57,28 @@ const typeDefs = `
   }
 
   type Query {
-
+    getUser(id: String!): User
+    getUsers: [User]
+    getCategory(id: String!): Category
+    getCategories: [Category]
+    getTransaction(id: String!): Transaction
+    getTransactions: [Transaction]
+    getProduct(id: String!): Product
+    getProducts: [Product]
   }
 
   type Mutation {
-
+    login(email: String!, password: String!): Auth
+    addUser(username: String!, email: String!, password: String!): Auth
+    addCategory(name: String!): Category
+    updateCategory(): Category
+    addToCategory(category: Category!, product: Product!): Category
+    removeCategory(catId: String!): Category
+    addTransaction(buyer: User!, seller: User!, cart: Cart!): Transaction
+    addProduct(item: Item!, stock: Int, price: Float): Product
+    updateProduct(): Product
+    removeProduct(productId: String!): Item
+    createPrePurchase(productId: Product!, amount: Int!): PrePurchase
   }
 `;
 
