@@ -68,8 +68,6 @@ const typeDefs = `
   type Query {
     getUser(id: String!): User
     getUsers: [User]
-    getItem(id: String!): Item
-    getItems: [Item]
     getCategory(id: String!): Category
     getCategories: [Category]
     getTransaction(id: String!): Transaction
@@ -82,9 +80,6 @@ const typeDefs = `
     login(email: String!, password: String!): Auth
     addUser(username: String!, email: String!, password: String!): Auth
     makeAdmin(userId: String!): User
-    addItem(name: String!): Item
-    updateItem(): Item
-    removeItem(itemId: String!): Item
     addCategory(name: String!): Category
     updateCategory(): Category
     addToCategory(category: Category!, product: Product!): Category
@@ -93,7 +88,7 @@ const typeDefs = `
     addProduct(item: Item!, stock: Int, price: Float): Product
     updateProduct(): Product
     removeProduct(productId: String!): Item
-    createPrePurchase(): PrePurchase
+    createPrePurchase(productId: Product!, amount: Int!): PrePurchase
   }
 `;
 
