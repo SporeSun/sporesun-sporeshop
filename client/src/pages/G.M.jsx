@@ -1,47 +1,47 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './home.css';
 import { Card, Stack, Text, Image, CardBody } from '@chakra-ui/react'
 
-export default function Home() {
+export default function gM() {
 
     const categoryData = [
         {
             id: 1,
-            src: 'https://i.imgur.com/oEC8pLk_d.webp?maxwidth=760&fidelity=grand',
-            description: "Psilocybe Cubensis",
-            link: '/psilocybe-cubensis',
-
+            src: "https://i.imgur.com/Izp4vM2_d.webp?maxwidth=760&fidelity=grand",
+            name: "Brown Beech Mushrooms",
         },
         {
             id: 2,
-            src: 'https://i.imgur.com/tXpKMMz.jpeg',
-            description: "Exotic Psilocybe",
-            link: '/exotic-psilocybe',
+            src: "https://i.imgur.com/WXBElSJ_d.webp?maxwidth=760&fidelity=grand",
+            name: "Lion's Mane",
         },
         {
             id: 3,
-            src: 'https://i.imgur.com/Izp4vM2_d.webp?maxwidth=760&fidelity=grand',
-            description: "Gourmet and Medicinal Cultures",
-            link: '/gourmet-and-medicinal-cultures',
+            src: "https://i.imgur.com/g3UJKhF_d.webp?maxwidth=760&fidelity=grand",
+            name: "Antler Reishi",
         },
+        {
+            id: 4,
+            src: "https://i.imgur.com/TZjZVTw_d.webp?maxwidth=760&fidelity=grand",
+            name: "King Oyster Mushroom",
+        }
     ];
-
+    
     return (
         <div className='body'>
-            {categoryData.map((category) => (
-                <div key={category.id} className='key'>
+            {categoryData.map((gourmet) => (
+                <div key={gourmet.id} className='key'>
                     <Card maxW='sm' mx={10} my={10} >
                         <CardBody className="card-body">
                             <Image
-                                src={category.src}
+                                src={gourmet.src}
                                 borderRadius='lg'
                                 className="image"
                             />
                             <Stack mt='6' spacing='3'>
-                                <Link to={category.link}>
+                                <Link to={gourmet.link}>
                                     <Text className="description">
-                                        {category.description}
+                                        {gourmet.name}
                                     </Text>
                                 </Link>
                             </Stack>
@@ -50,5 +50,5 @@ export default function Home() {
                 </div>
             ))}
         </div>
-    );
+    )
 }
