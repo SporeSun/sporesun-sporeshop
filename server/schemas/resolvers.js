@@ -12,13 +12,6 @@ const resolvers = {
       const params = id ? { id } : {};
       return User.find(params);
     },
-    getItems: async () => {
-      return Item.find({});
-    },
-    getItem: async (parent, { id }) => {
-      const params = id ? { id } : {};
-      return Item.find(params);
-    },
     getCategories: async () => {
       return Category.find({});
     },
