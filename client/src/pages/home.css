@@ -1,5 +1,4 @@
 .body {
-    height: 100vh;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -10,4 +9,21 @@
     flex: 0 0 50%;
     box-sizing: border-box;
     padding-left: 140px;
+    margin-bottom: 30px;
+}
+
+.card-body {
+    background-color: rgb(76, 86, 86);
+    border-radius: 50px;
+    border: 2px solid rgb(0, 0, 0);
+}
+
+.image {
+    border: 3px solid rgb(0, 0, 0);
+    box-shadow: 5px 5px 10px rgb(104, 38, 38);
+}
+
+.description {
+    font-weight: 1000;
+    font-size: x-large;
 }
