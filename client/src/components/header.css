@@ -1,0 +1,14 @@
+.header {
+    position: relative;
+    height: 100px;
+    background-color: #f0f0f0;
+    text-align: center;
+}
+
+.heading {
+    position: absolute;
+    top: calc(50% - 10px); /* Adjust the value to move the heading up or down */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0; /* Remove default margin to ensure accurate centering */
+}

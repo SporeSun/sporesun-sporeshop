@@ -5,6 +5,9 @@ import { ChakraProvider } from "@chakra-ui/react"
 
 import App from './App';
 import Home from './pages/Home';
+import Psilocybe from './pages/P.C.jsx';
+import Exotic from './pages/E.P.jsx';
+import Gourmet from './pages/G.M.jsx';
 
 const router = createBrowserRouter([
   {
@@ -16,7 +19,18 @@ const router = createBrowserRouter([
         index: true,
         element: <Home/>
       },
-      
+      {
+        path: '/psilocybe-cubensis',
+        element: <Psilocybe />,
+      },
+      {
+        path: '/exotic-psilocybe',
+        element: <Exotic />,
+      },
+      {
+        path: '/gourmet-and-medicinal-cultures',
+        element: <Gourmet />,
+      },
     ]
   }
 ])
