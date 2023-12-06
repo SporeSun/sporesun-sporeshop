@@ -29,19 +29,19 @@ export default function Home() {
             id: 4,
             src: 'https://i.imgur.com/PXqtcfv.jpg',
             description: "Live Plants",
-            link: '/gourmet-and-medicinal-cultures',
+            link: '/live-plants',
         },
         {
             id: 5,
             src: 'https://i.imgur.com/yLnWwsR.jpg',
             description: "Seeds",
-            link: '/gourmet-and-medicinal-cultures',
+            link: '/seeds',
         },
         {
             id: 6,
             src: 'https://i.imgur.com/nJShOaS.jpg',
             description: "Lab Supplies",
-            link: '/gourmet-and-medicinal-cultures',
+            link: '/lab-supplies',
         },
     ];
 

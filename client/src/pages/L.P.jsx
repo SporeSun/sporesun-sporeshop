@@ -13,35 +13,30 @@ export default function gM() {
         {
             id: 2,
             src: "https://i.imgur.com/m7jscmZ.jpg",
-            name: "Lion's Mane",
+            name: "Curry Tree",
         },
         {
             id: 3,
-            src: "https://i.imgur.com/g3UJKhF_d.webp?maxwidth=760&fidelity=grand",
-            name: "Antler Reishi",
-        },
-        {
-            id: 4,
-            src: "https://i.imgur.com/TZjZVTw_d.webp?maxwidth=760&fidelity=grand",
-            name: "King Oyster Mushroom",
+            src: "https://i.imgur.com/m7jscmZ.jpg",
+            name: "Trichocereus Terscheckii",
         }
     ];
     
     return (
         <div className='body'>
-            {categoryData.map((gourmet) => (
-                <div key={gourmet.id} className='key'>
+            {categoryData.map((plant) => (
+                <div key={plant.id} className='key'>
                     <Card maxW='sm' mx={10} my={10} >
                         <CardBody className="card-body">
                             <Image
-                                src={gourmet.src}
+                                src={plant.src}
                                 borderRadius='lg'
                                 className="image"
                             />
                             <Stack mt='6' spacing='3'>
-                                <Link to={gourmet.link}>
+                                <Link to={plant.link}>
                                     <Text className="description">
-                                        {gourmet.name}
+                                        {plant.name}
                                     </Text>
                                 </Link>
                             </Stack>
