@@ -5,11 +5,6 @@ const productSchema = require('./Product');
 
 const prePurchaseSchema = new Schema(
   {
-    item: {
-      type: Item,
-      required: true,
-    },
-    
     product: {
       type: productSchema,
       required: true,

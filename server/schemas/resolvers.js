@@ -12,13 +12,6 @@ const resolvers = {
       const params = id ? { id } : {};
       return User.find(params);
     },
-    getItems: async () => {
-      return Item.find({});
-    },
-    getItem: async (parent, { id }) => {
-      const params = id ? { id } : {};
-      return Item.find(params);
-    },
     getCategories: async () => {
       return Category.find({});
     },
@@ -62,8 +55,8 @@ const resolvers = {
 
       return { token, user };
     },
-    addUser: async (parent, { username, email, password }) => {
-      const user = await User.create({ username, email, password });
+    addUser: async (parent, { firstName, lastName, email, password }) => {
+      const user = await User.create({ firstName, lastName, email, password });
       const token = signToken(user);
       return { token, user };
     },

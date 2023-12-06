@@ -27,6 +27,7 @@ const typeDefs = `
     contents: [PrePurchase]
   }
 
+  
   type Tag {
     _id: ID
     tag: String!
@@ -34,7 +35,8 @@ const typeDefs = `
 
   type User {
     _id: ID
-    username: String!
+    firstName: String!
+    lastName: String!
     email: String!
     password: String!
     isAdmin: Boolean
@@ -69,7 +71,7 @@ const typeDefs = `
 
   type Mutation {
     login(email: String!, password: String!): Auth
-    addUser(username: String!, email: String!, password: String!): Auth
+    addUser(firstName: String!, lastName: String!, email: String!, password: String!): Auth
     addCategory(name: String!): Category
     updateCategory(): Category
     addToCategory(category: Category!, product: Product!): Category
