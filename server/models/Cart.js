@@ -7,7 +7,7 @@ const prePurchaseSchema = require('./PrePurchase');
 const cartSchema = new Schema(
   {
     owner: {
-      type: User,
+      type: String,
     },
     contents:{
       type: [prePurchaseSchema],
@@ -20,6 +20,7 @@ const cartSchema = new Schema(
     },
   }
 );
+
 cartSchema.virtual('totalCost').get(function () {
   var sum = 0;
   this.contents.map((t) => sum += t.cost);
