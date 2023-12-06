@@ -1,6 +1,5 @@
 const { Schema, model } = require('mongoose');
 const bcrypt = require('bcrypt');
-const Item = require('./Item');
 const productSchema = require('./Product');
 
 const prePurchaseSchema = new Schema(
@@ -11,7 +10,7 @@ const prePurchaseSchema = new Schema(
     },
     
     amount: {
-      type: Int,
+      type: Number,
       required: true,
     },
   },

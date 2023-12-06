@@ -8,6 +8,9 @@ import Home from './pages/Home';
 import Psilocybe from './pages/P.C.jsx';
 import Exotic from './pages/E.P.jsx';
 import Gourmet from './pages/G.M.jsx';
+import Seeds from './pages/Seeds.jsx';
+import Plant from './pages/L.P.jsx';
+import Lab from './pages/L.S.jsx';
 
 const router = createBrowserRouter([
   {
@@ -30,6 +33,18 @@ const router = createBrowserRouter([
       {
         path: '/gourmet-and-medicinal-cultures',
         element: <Gourmet />,
+      },
+      {
+        path: '/live-plants',
+        element: <Plant />,
+      },
+      {
+        path: '/seeds',
+        element: <Seeds />,
+      },
+      {
+        path: '/lab-supplies',
+        element: <Lab />,
       },
     ]
   }
