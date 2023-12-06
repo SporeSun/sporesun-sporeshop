@@ -16,7 +16,6 @@ const transactionSchema = new Schema(
     buyer: {
       type: Schema.Types.ObjectId,
       ref:"User",
-      required: true,
     },
     items: [prePurchaseSchema],
     cost: {
