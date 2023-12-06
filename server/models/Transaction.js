@@ -19,7 +19,7 @@ const transactionSchema = new Schema(
     },
     items: [prePurchaseSchema],
     cost: {
-      type: Float,
+      type: Number,
       required: true,
     },
   },
