@@ -9,14 +9,14 @@ export default function Home() {
         {
             id: 1,
             src: 'https://i.imgur.com/oEC8pLk_d.webp?maxwidth=760&fidelity=grand',
-            description: "Psilocybe Cubensis",
+            description: "Psilocybe Cubensis Spores",
             link: '/psilocybe-cubensis',
 
         },
         {
             id: 2,
             src: 'https://i.imgur.com/tXpKMMz.jpeg',
-            description: "Exotic Psilocybe",
+            description: "Exotic Psilocybe Spores",
             link: '/exotic-psilocybe',
         },
         {
