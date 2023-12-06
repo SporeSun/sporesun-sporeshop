@@ -25,6 +25,24 @@ export default function Home() {
             description: "Gourmet and Medicinal Cultures",
             link: '/gourmet-and-medicinal-cultures',
         },
+        {
+            id: 4,
+            src: 'https://i.imgur.com/PXqtcfv.jpg',
+            description: "Live Plants",
+            link: '/gourmet-and-medicinal-cultures',
+        },
+        {
+            id: 5,
+            src: 'https://i.imgur.com/yLnWwsR.jpg',
+            description: "Seeds",
+            link: '/gourmet-and-medicinal-cultures',
+        },
+        {
+            id: 6,
+            src: 'https://i.imgur.com/nJShOaS.jpg',
+            description: "Lab Supplies",
+            link: '/gourmet-and-medicinal-cultures',
+        },
     ];
 
     return (
