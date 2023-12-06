@@ -14,11 +14,7 @@ const transactionSchema = new Schema(
       required: true,
     },
     buyer: {
-      type: User,
-      required: true,
-    },
-    seller: {
-      type: User,
+      type: String,
       required: true,
     },
     items: {
