@@ -24,6 +24,7 @@ const typeDefs = `
 
   type Cart {
     _id: ID
+    owner: String
     contents: [PrePurchase]
   }
 
