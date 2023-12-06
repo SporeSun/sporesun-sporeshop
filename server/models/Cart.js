@@ -9,9 +9,7 @@ const cartSchema = new Schema(
     owner: {
       type: String,
     },
-    contents:{
-      type: [prePurchaseSchema],
-    }
+    contents:[prePurchaseSchema]
   },
   // set this to use virtual below
   {
