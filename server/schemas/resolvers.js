@@ -1,5 +1,5 @@
 const jwt = require('jsonwebtoken');
-const { User, Cart, Category, Item, PrePurchase, Product, Transaction } = require('../models');
+const { User, Cart, Category, PrePurchase, Product, Transaction } = require('../models');
 const { signToken, AuthenticationError } = require('../utils/auth');
 
 const resolvers = {
