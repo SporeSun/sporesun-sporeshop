@@ -22,12 +22,6 @@ const typeDefs = `
     image: String
   }
 
-  type Cart {
-    _id: ID
-    owner: String
-    contents: [PrePurchase]
-  }
-
   
   type Tag {
     _id: ID
@@ -47,8 +41,7 @@ const typeDefs = `
     _id: ID!
     date: String!
     store: Store!
-    buyer: User!
-    seller: User!
+    buyer: ID!
     items: Cart!
     cost: Float!
     status: String!
