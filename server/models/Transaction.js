@@ -1,7 +1,7 @@
 const { Schema, model } = require('mongoose');
 const bcrypt = require('bcrypt');
 const User = require('./User');
-const cartSchema = require('./Cart');
+const prePurchaseSchema = require('./PrePurchase');
 
 const transactionSchema = new Schema(
   {
@@ -14,13 +14,11 @@ const transactionSchema = new Schema(
       required: true,
     },
     buyer: {
-      type: String,
+      type: Schema.Types.ObjectId,
+      ref:"User",
       required: true,
     },
-    items: {
-      type: cartSchema,
-      required: true,
-    },
+    items: [prePurchaseSchema],
     cost: {
       type: Number,
       required: true,
