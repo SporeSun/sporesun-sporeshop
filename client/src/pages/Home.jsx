@@ -21,7 +21,7 @@ export default function Home() {
         },
         {
             id: 3,
-            src: 'https://i.imgur.com/Izp4vM2_d.webp?maxwidth=760&fidelity=grand',
+            src: 'https://i.imgur.com/g3UJKhF.jpg',
             description: "Gourmet and Medicinal Cultures",
             link: '/gourmet-and-medicinal-cultures',
         },

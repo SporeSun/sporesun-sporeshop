@@ -24,6 +24,7 @@ const typeDefs = `
 
   type Cart {
     _id: ID
+    owner: User
     contents: [PrePurchase]
   }
 
@@ -47,7 +48,6 @@ const typeDefs = `
     date: String!
     store: Store!
     buyer: User!
-    seller: User!
     items: Cart!
     cost: Float!
     status: String!
