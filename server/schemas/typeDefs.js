@@ -48,7 +48,6 @@ const typeDefs = `
     date: String!
     store: Store!
     buyer: User!
-    seller: User!
     items: Cart!
     cost: Float!
     status: String!

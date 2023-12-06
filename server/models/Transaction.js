@@ -22,7 +22,7 @@ const transactionSchema = new Schema(
       required: true,
     },
     cost: {
-      type: Float,
+      type: Number,
       required: true,
     },
   },
