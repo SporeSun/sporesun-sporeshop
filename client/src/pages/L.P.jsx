@@ -17,7 +17,7 @@ export default function gM() {
         },
         {
             id: 3,
-            src: "https://i.imgur.com/m7jscmZ.jpg",
+            src: "https://i.imgur.com/PXqtcfv.jpg",
             name: "Trichocereus Terscheckii",
         }
     ];
