@@ -134,7 +134,7 @@ const productData = [
   {
     _id: 11,
     name: "Trichocereus Terscheckii",
-    image: 'https://i.imgur.com/m7jscmZ.jpg',
+    image: 'https://i.imgur.com/PXqtcfv.jpg',
     description: "A towering cactus species, known for its impressive size and ornamental value.",
     brand: "Green Essence",
     category: "Live Plants",
@@ -215,7 +215,7 @@ const productData = [
     _id: 17,
     name: "Lophophora Williamsii",
     image: 'https://i.imgur.com/yLnWwsR.jpg',
-    description: "Rare cactus seeds, known for their unique properties and historical significance.Pack of 10 seeds",
+    description: "Rare cactus seeds, known for their unique properties and historical significance. Pack of 10 seeds",
     brand: "Desert Gems",
     category: "Seeds",
     price: 20.00,
