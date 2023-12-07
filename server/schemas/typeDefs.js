@@ -3,7 +3,10 @@ const typeDefs = `
     _id: ID
     displayName: String!
     products: [Product]
-
+  }
+  input CategoryInput {
+    displayName: String!
+    products: [ProductInput]
   }
 
   type PrePurchase {
@@ -11,10 +14,21 @@ const typeDefs = `
     cost: Float
     amount: Int
   }
+  input PrePurchaseInput {
+    product: ProductInput
+    cost: Float
+    amount: Int
+  }
 
   type Product {
     _id: ID
-    parent: Item!
+    price: Float!
+    stock: Int!
+    name: String!
+    description: String
+    image: String
+  }
+  input ProductInput {
     price: Float!
     stock: Int!
     name: String!
@@ -27,6 +41,9 @@ const typeDefs = `
     _id: ID
     tag: String!
   }
+  input TagInput {
+    tag: String!
+  }
 
   type User {
     _id: ID
@@ -35,14 +52,27 @@ const typeDefs = `
     email: String!
     password: String!
     isAdmin: Boolean
-
   }
+  input UserInput {
+    firstName: String!
+    lastName: String!
+    email: String!
+    password: String!
+    isAdmin: Boolean
+  }
+
   type Transaction {
     _id: ID!
     date: String!
-    store: Store!
     buyer: ID!
-    items: Cart!
+    items: [PrePurchase]!
+    cost: Float!
+    status: String!
+  }
+  input TransactionInput {
+    date: String!
+    buyer: ID!
+    items: [PrePurchaseInput]!
     cost: Float!
     status: String!
   }
@@ -67,14 +97,15 @@ const typeDefs = `
     login(email: String!, password: String!): Auth
     addUser(firstName: String!, lastName: String!, email: String!, password: String!): Auth
     addCategory(name: String!): Category
-    updateCategory(): Category
-    addToCategory(category: Category!, product: Product!): Category
+    updateCategory: Category
+    addToCategory(category: CategoryInput!, product: ProductInput!): Category
     removeCategory(catId: String!): Category
-    addTransaction(buyer: User!, seller: User!, cart: Cart!): Transaction
-    addProduct(item: Item!, stock: Int, price: Float): Product
-    updateProduct(): Product
-    removeProduct(productId: String!): Item
-    createPrePurchase(productId: Product!, amount: Int!): PrePurchase
+    removeFromCategory(categoryID: String!, productId: String!): Category
+    addTransaction(buyer: UserInput, cart: [PrePurchaseInput]!): Transaction
+    addProduct(name: String, stock: Int, price: Float, description: String, image: String): Product
+    updateProduct: Product
+    removeProduct(productId: String!): Product
+    createPrePurchase(product: ProductInput!, amount: Int!): PrePurchase
   }
 `;
 
