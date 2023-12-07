@@ -3,7 +3,7 @@ const categories = [
     name: "Seeds",
   },
   {
-    name: "Psilocybin Cubensis Spores",
+    name: "Psilocybe Cubensis Spores",
   },
   {
     name: "Live Plants",
@@ -12,7 +12,7 @@ const categories = [
     name: "Gourmet and Medicinal Cultures",
   },
   {
-    name: "Exotic Psilocybin Spores",
+    name: "Exotic Psilocybe Spores",
   },
   {
     name: "Lab Supplies",
