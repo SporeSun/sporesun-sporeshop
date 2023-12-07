@@ -1,55 +1,67 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './home.css';
-import { Card, Stack, Heading, Text, Image, CardBody, Grid } from '@chakra-ui/react'
+import { Card, Stack, Text, Image, CardBody } from '@chakra-ui/react'
 
 export default function Home() {
 
     const categoryData = [
         {
             id: 1,
-            src: 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80',
-            name: "Category 1",
-            description: "Number 1",
+            src: 'https://i.imgur.com/oEC8pLk_d.webp?maxwidth=760&fidelity=grand',
+            description: "Psilocybe Cubensis Spores",
+            link: '/psilocybe-cubensis',
 
         },
         {
             id: 2,
-            src: 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80',
-            name: "Category 2",
-            description: "Number 2",
-
+            src: 'https://i.imgur.com/tXpKMMz.jpeg',
+            description: "Exotic Psilocybe Spores",
+            link: '/exotic-psilocybe',
         },
         {
             id: 3,
-            src: 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80',
-            name: "Category 3",
-            description: "Number 3",
-
+            src: 'https://i.imgur.com/g3UJKhF.jpg',
+            description: "Gourmet and Medicinal Cultures",
+            link: '/gourmet-and-medicinal-cultures',
         },
         {
             id: 4,
-            src: 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80',
-            name: "Category 4",
-            description: "Number 4",
-
-        }
+            src: 'https://i.imgur.com/PXqtcfv.jpg',
+            description: "Live Plants",
+            link: '/live-plants',
+        },
+        {
+            id: 5,
+            src: 'https://i.imgur.com/yLnWwsR.jpg',
+            description: "Seeds",
+            link: '/seeds',
+        },
+        {
+            id: 6,
+            src: 'https://i.imgur.com/nJShOaS.jpg',
+            description: "Lab Supplies",
+            link: '/lab-supplies',
+        },
     ];
 
     return (
         <div className='body'>
             {categoryData.map((category) => (
                 <div key={category.id} className='key'>
-                    <Card maxW='sm' mx={10} my={10}>
-                        <CardBody>
+                    <Card maxW='sm' mx={10} my={10} >
+                        <CardBody className="card-body">
                             <Image
                                 src={category.src}
                                 borderRadius='lg'
+                                className="image"
                             />
                             <Stack mt='6' spacing='3'>
-                                <Heading size='md'>{category.name}</Heading>
-                                <Text>
-                                    {category.description}
-                                </Text>
+                                <Link to={category.link}>
+                                    <Text className="description">
+                                        {category.description}
+                                    </Text>
+                                </Link>
                             </Stack>
                         </CardBody>
                     </Card>
