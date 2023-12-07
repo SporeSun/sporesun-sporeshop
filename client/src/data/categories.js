@@ -1,21 +1,21 @@
 const categories = [
   {
-    name: "Seeds",
+    name: "Electronics",
   },
   {
-    name: "Psilocybin Cubensis Spores",
+    name: "Cloths",
   },
   {
-    name: "Live Plants",
+    name: "Sports",
   },
   {
-    name: "Gourmet and Medicinal Cultures",
+    name: "Toys",
   },
   {
-    name: "Exotic Psilocybin Spores",
+    name: "Snikers",
   },
   {
-    name: "Lab Supplies",
+    name: "Vehicals",
   }
 ];
 
