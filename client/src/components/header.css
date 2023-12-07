@@ -11,4 +11,13 @@
     left: 50%;
     transform: translate(-50%, -50%);
     margin: 0; /* Remove default margin to ensure accurate centering */
+    font-family: 'Orbitron', 'Open Sans', 'sans-serif';
+}
+
+.header-image {
+    border: 3px solid rgb(0, 0, 0);
+}
+
+.cart {
+    margin-top: 5px;
 }
