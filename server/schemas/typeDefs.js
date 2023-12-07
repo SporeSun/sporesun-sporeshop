@@ -6,7 +6,7 @@ const typeDefs = `
   }
   input CategoryInput {
     displayName: String!
-    products: [Product]
+    products: [ProductInput]
   }
 
   type PrePurchase {
@@ -15,7 +15,7 @@ const typeDefs = `
     amount: Int
   }
   input PrePurchaseInput {
-    product: Product
+    product: ProductInput
     cost: Float
     amount: Int
   }
@@ -72,7 +72,7 @@ const typeDefs = `
   input TransactionInput {
     date: String!
     buyer: ID!
-    items: [PrePurchase]!
+    items: [PrePurchaseInput]!
     cost: Float!
     status: String!
   }
@@ -98,14 +98,14 @@ const typeDefs = `
     addUser(firstName: String!, lastName: String!, email: String!, password: String!): Auth
     addCategory(name: String!): Category
     updateCategory: Category
-    addToCategory(category: Category!, product: Product!): Category
+    addToCategory(category: CategoryInput!, product: ProductInput!): Category
     removeCategory(catId: String!): Category
     removeFromCategory(categoryID: String!, productId: String!): Category
-    addTransaction(buyer: User, cart: [PrePurchase]!): Transaction
+    addTransaction(buyer: UserInput, cart: [PrePurchaseInput]!): Transaction
     addProduct(name: String, stock: Int, price: Float, description: String, image: String): Product
     updateProduct: Product
     removeProduct(productId: String!): Product
-    createPrePurchase(productId: Product!, amount: Int!): PrePurchase
+    createPrePurchase(product: ProductInput!, amount: Int!): PrePurchase
   }
 `;
 
