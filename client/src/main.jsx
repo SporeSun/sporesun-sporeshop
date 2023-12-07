@@ -1,7 +1,9 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import { ChakraProvider } from "@chakra-ui/react"
+import { ChakraProvider } from "@chakra-ui/react";
+import createCache from '@emotion/cache';
+import { CacheProvider } from '@emotion/react';
 
 import App from './App';
 import Home from './pages/Home';
@@ -11,6 +13,11 @@ import Gourmet from './pages/G.M.jsx';
 import Seeds from './pages/Seeds.jsx';
 import Plant from './pages/L.P.jsx';
 import Lab from './pages/L.S.jsx';
+
+const emotionCache = createCache({
+  key: 'emotion-css-cache',
+  prepend: true, // ensures styles are prepended to the <head>, instead of appended
+});
 
 const router = createBrowserRouter([
   {
@@ -51,7 +58,9 @@ const router = createBrowserRouter([
 ])
 
 ReactDOM.createRoot(document.getElementById('root')).render(
+  <CacheProvider value={emotionCache}>
   <ChakraProvider>
     <RouterProvider router={router} />
   </ChakraProvider>
+  </CacheProvider>
 );

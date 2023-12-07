@@ -49,7 +49,7 @@ export default function Home() {
         <div className='body'>
             {categoryData.map((category) => (
                 <div key={category.id} className='key'>
-                    <Card maxW='sm' mx={10} my={10} >
+                    <Card maxW='sm' mx={10} my={10} className="card">
                         <CardBody className="card-body">
                             <Image
                                 src={category.src}
