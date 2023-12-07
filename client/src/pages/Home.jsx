@@ -1,72 +1,80 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import './home.css';
-import { Card, Stack, Text, Image, CardBody } from '@chakra-ui/react'
-
+import { Card, Stack, Heading, Text,  Image, CardBody, Grid } from '@chakra-ui/react'
+import { Link } from 'react-router-dom';
 export default function Home() {
 
     const categoryData = [
         {
-            id: 1,
-            src: 'https://i.imgur.com/oEC8pLk_d.webp?maxwidth=760&fidelity=grand',
-            description: "Psilocybe Cubensis Spores",
-            link: '/psilocybe-cubensis',
-
-        },
-        {
-            id: 2,
-            src: 'https://i.imgur.com/tXpKMMz.jpeg',
-            description: "Exotic Psilocybe Spores",
-            link: '/exotic-psilocybe',
-        },
-        {
-            id: 3,
-            src: 'https://i.imgur.com/g3UJKhF.jpg',
-            description: "Gourmet and Medicinal Cultures",
-            link: '/gourmet-and-medicinal-cultures',
-        },
-        {
-            id: 4,
-            src: 'https://i.imgur.com/PXqtcfv.jpg',
-            description: "Live Plants",
-            link: '/live-plants',
-        },
-        {
-            id: 5,
-            src: 'https://i.imgur.com/yLnWwsR.jpg',
-            description: "Seeds",
-            link: '/seeds',
-        },
-        {
-            id: 6,
+            _id: 1,
+            src: 'https://i.imgur.com/PILVuRL_d.webp?maxwidth=760&fidelity=grand',
+            name: "Exotic Psilocybin Spores",
+            description: "Explore our unique collection of Exotic Psilocybin Spores, featuring rare and potent varieties like Psilocybe Natalensis, Psilocybe Caerulipes, and more. Perfect for mycologists and enthusiasts seeking distinctive psychedelic experiences."
+          },
+          
+          {
+            _id: 2,
+            src: 'https://i.imgur.com/Izp4vM2_d.webp?maxwidth=760&fidelity=grand',
+            name: "Gourmet and Medicinal Cultures",
+            description: "Dive into the world of culinary delights with our Gourmet and Medicinal Cultures. From Brown Beech Mushrooms to Lion's Mane, these varieties offer both exquisite flavors and health benefits."
+          },
+          
+          {
+            _id: 3,
+            src: 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80',
+            name: "Live Plants",
+            description: "Our Live Plants category offers a selection of vibrant and healthy plants like Sweet Basil, Curry Tree, and more. Perfect for adding a touch of greenery to your space or garden."
+          },
+          
+          {
+            _id: 4,
             src: 'https://i.imgur.com/nJShOaS.jpg',
-            description: "Lab Supplies",
-            link: '/lab-supplies',
-        },
+            name: "Lab Supplies",
+            description: "Equipped for success! Our Lab Supplies range, featuring high-quality items like Prepared Malt-Yeast Agar, caters to both professional and amateur mycologists' laboratory needs."
+          },
+          
+          {
+            _id: 5,
+            src: 'https://i.imgur.com/oEC8pLk_d.webp?maxwidth=760&fidelity=grand',
+            name: "Psilocybin Cubensis Spores",
+            description: "Discover the popular Psilocybin Cubensis Spores collection, boasting strains like Avery's Albino and Golden Teacher. Ideal for those seeking to explore the fascinating world of psilocybin mushrooms."
+          },
+          
+          {
+            _id: 6,
+            src: 'https://i.imgur.com/yLnWwsR.jpg',
+            name: "Seeds",
+            description: "Our Seeds category offers a diverse selection of plant seeds, including the rare Lophophora Williamsii. Perfect for enthusiasts and gardeners looking to cultivate unique plants."
+          }
+          
     ];
 
     return (
-        <div className='body'>
+        <>
+            <div className='body'>
             {categoryData.map((category) => (
-                <div key={category.id} className='key'>
-                    <Card maxW='sm' mx={10} my={10} className="card">
-                        <CardBody className="card-body">
+                <div key={category._id} className='key'>
+                    <Link to={`/category/${category.name}`}>
+                    <Card maxW='sm' mx={10} my={10}>
+                        <CardBody>
                             <Image
                                 src={category.src}
                                 borderRadius='lg'
-                                className="image"
                             />
                             <Stack mt='6' spacing='3'>
-                                <Link to={category.link}>
-                                    <Text className="description">
-                                        {category.description}
-                                    </Text>
-                                </Link>
+                                <Heading size='md'>{category.name}</Heading>
+                                <Text>
+                                    {category.description}
+                                </Text>
                             </Stack>
                         </CardBody>
                     </Card>
+                    </Link> 
                 </div>
             ))}
         </div>
+       
+        </>
+    
     );
 }
