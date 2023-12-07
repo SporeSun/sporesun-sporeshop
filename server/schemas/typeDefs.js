@@ -3,7 +3,6 @@ const typeDefs = `
     _id: ID
     displayName: String!
     products: [Product]
-
   }
 
   type PrePurchase {
@@ -14,7 +13,6 @@ const typeDefs = `
 
   type Product {
     _id: ID
-    parent: Item!
     price: Float!
     stock: Int!
     name: String!
@@ -35,14 +33,13 @@ const typeDefs = `
     email: String!
     password: String!
     isAdmin: Boolean
-
   }
+
   type Transaction {
     _id: ID!
     date: String!
-    store: Store!
     buyer: ID!
-    items: Cart!
+    items: [PrePurchase]!
     cost: Float!
     status: String!
   }
@@ -67,13 +64,14 @@ const typeDefs = `
     login(email: String!, password: String!): Auth
     addUser(firstName: String!, lastName: String!, email: String!, password: String!): Auth
     addCategory(name: String!): Category
-    updateCategory(): Category
+    updateCategory: Category
     addToCategory(category: Category!, product: Product!): Category
     removeCategory(catId: String!): Category
-    addTransaction(buyer: User!, seller: User!, cart: Cart!): Transaction
-    addProduct(item: Item!, stock: Int, price: Float): Product
-    updateProduct(): Product
-    removeProduct(productId: String!): Item
+    removeFromCategory(categoryID: String!, productId: String!): Category
+    addTransaction(buyer: User, cart: [PrePurchase]!): Transaction
+    addProduct(name: String, stock: Int, price: Float, description: String, image: String): Product
+    updateProduct: Product
+    removeProduct(productId: String!): Product
     createPrePurchase(productId: Product!, amount: Int!): PrePurchase
   }
 `;
