@@ -1,10 +1,15 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+
 import { ChakraProvider } from "@chakra-ui/react"
 import { Provider } from "react-redux";
 import { HashRouter as Router } from 'react-router-dom'; // Change this line
 import store from "./redux/store";
+import createCache from '@emotion/cache';
+import { CacheProvider } from '@emotion/react';
+
+
 import App from './App';
 import Home from './pages/Home';
 import CartScreen from './pages/CartScreen';
@@ -13,6 +18,11 @@ import Contact from './pages/Contact';
 import ProductsPage from './pages/ProductsPage';
 import CategoryScreen from './pages/CategoryScreen';
 import "./assets/styles/bootstrap.custom.css";
+
+const emotionCache = createCache({
+  key: 'emotion-css-cache',
+  prepend: true, // ensures styles are prepended to the <head>, instead of appended
+});
 
 const router = createBrowserRouter([
   {
@@ -46,6 +56,7 @@ const router = createBrowserRouter([
 ])
 
 ReactDOM.createRoot(document.getElementById('root')).render(
+  <CacheProvider value={emotionCache}>
   <ChakraProvider>
     {/* <Provider store={store}>
     <RouterProvider router={router} />
@@ -57,5 +68,6 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       </Router>
   </Provider>,
   </ChakraProvider>
+  </CacheProvider>
 );
 
