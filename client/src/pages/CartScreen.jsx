@@ -49,7 +49,7 @@ const CartScreen = () => {
   };
 
   return (
-    <Row style={{minHeight:"70vh"}}>
+    <Row>
       <Col md={8}>
         <h1 style={{ marginBottom: "20px" }}>Shopping Cart</h1>
         {cartItems?.length === 0 ? (

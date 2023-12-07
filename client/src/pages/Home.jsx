@@ -40,7 +40,7 @@ export default function Home() {
             <div className='body'>
             {categoryData.map((category) => (
                 <div key={category._id} className='key'>
-                    <Link to={`/category/${category.name}`}>
+                    <Link to={`/category/${category._id}`}>
                     <Card maxW='sm' mx={10} my={10}>
                         <CardBody>
                             <Image
