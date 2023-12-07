@@ -1,56 +1,78 @@
+/* Reset some default styles */
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+/* Body styles */
 body {
     min-height: 100vh;
     margin-bottom: 100px;
-  
-*{
-    margin: 0px;
-    padding: 0px;
+    background-color: #1f1f1f; /* Dark background color */
+    color: #fff; /* White text color */
 }
 
-main{
+/* Main content */
+main {
     min-height: 80vh;
+    padding: 20px; /* Added padding for better content spacing */
 }
-.rating span{
+
+/* Rating styles */
+.rating span {
     margin: 0.1rem;
 }
-.rating svg{
-    color: #f8e825;
+
+.rating svg {
+    color: #f8e825; /* Yellow rating stars */
 }
 
-.rating-text{
-    font-size: 0.8rem;
-    font-size: 600;
-    padding-left:0.5rem;
+.rating-text {
+    font-size: 1rem; /* Slightly larger font size */
+    font-weight: 600;
+    padding-left: 0.5rem;
 }
-.product-title{
+
+/* Product title styles */
+.product-title {
     height: 2.5rem;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    color: #fff; /* White text color */
 }
 
+/* Table styles */
 table td,
-table th{
+table th {
     text-align: center;
+    color: #fff; /* White text color */
 }
-.review{
+
+/* Review section styles */
+.review {
     margin-top: 30px;
 }
 
-.review h2{
-    font-size: 24px;
-    background: #f4f4f4;
+.review h2 {
+    font-size: 1.5rem; /* Larger font size */
+    background: #333; /* Dark background color */
     padding: 10px;
-    border: 1px solid #ddd;
+    border: 1px solid #444; /* Dark border */
+    color: #fff; /* White text color */
 }
 
-.review button{
+.review button {
     margin-top: 10px;
 }
-.corousel-caption{
+
+/* Carousel caption styles */
+.carousel-caption {
     position: absolute;
     width: 100%;
     left: 0;
     right: 0;
-    background: rgba(0,0,0, 0.5);
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent dark background */
+    color: #fff; /* White text color */
+    padding: 10px; /* Added padding for better visibility */
 }
