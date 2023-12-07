@@ -82,6 +82,10 @@ const typeDefs = `
     user: User
   }
 
+  type Checkout {
+    session: ID
+  }
+
   type Query {
     getUser(id: String!): User
     getUsers: [User]
@@ -91,6 +95,7 @@ const typeDefs = `
     getTransactions: [Transaction]
     getProduct(id: String!): Product
     getProducts: [Product]
+    checkout(products: [ProductInput]): Checkout
   }
 
   type Mutation {
