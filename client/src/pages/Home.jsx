@@ -7,32 +7,52 @@ export default function Home() {
     const categoryData = [
         {
             _id: 1,
-            src: 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80',
-            name: "Category 1",
-            description: "Number 1",
-
-        },
-        {
+            src: 'https://i.imgur.com/PILVuRL_d.webp?maxwidth=760&fidelity=grand',
+            name: "Exotic Psilocybin Spores",
+            description: "Explore our unique collection of Exotic Psilocybin Spores, featuring rare and potent varieties like Psilocybe Natalensis, Psilocybe Caerulipes, and more. Perfect for mycologists and enthusiasts seeking distinctive psychedelic experiences."
+          },
+          
+          {
             _id: 2,
-            src: 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80',
-            name: "Category 2",
-            description: "Number 2",
-
-        },
-        {
+            src: 'https://i.imgur.com/Izp4vM2_d.webp?maxwidth=760&fidelity=grand',
+            name: "Gourmet and Medicinal Cultures",
+            description: "Dive into the world of culinary delights with our Gourmet and Medicinal Cultures. From Brown Beech Mushrooms to Lion's Mane, these varieties offer both exquisite flavors and health benefits."
+          },
+          
+          {
             _id: 3,
             src: 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80',
-            name: "Category 3",
-            description: "Number 3",
-
-        },
-        {
+            name: "Live Plants",
+            description: "Our Live Plants category offers a selection of vibrant and healthy plants like Sweet Basil, Curry Tree, and more. Perfect for adding a touch of greenery to your space or garden."
+          },
+          
+          {
             _id: 4,
-            src: 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80',
-            name: "Category 4",
-            description: "Number 4",
+            src: 'https://i.imgur.com/nJShOaS.jpg',
+            name: "Lab Supplies",
+            description: "Equipped for success! Our Lab Supplies range, featuring high-quality items like Prepared Malt-Yeast Agar, caters to both professional and amateur mycologists' laboratory needs."
+          },
 
-        }
+          {
+            _id: 5,
+            src: 'https://i.imgur.com/oEC8pLk_d.webp?maxwidth=760&fidelity=grand',
+            name: "Psilocybin Cubensis Spores",
+            description: "Discover the popular Psilocybin Cubensis Spores collection, boasting strains like Avery's Albino and Golden Teacher. Ideal for those seeking to explore the fascinating world of psilocybin mushrooms."
+          },
+
+          {
+            _id: 6,
+            src: 'https://i.imgur.com/yLnWwsR.jpg',
+            name: "Seeds",
+            description: "Our Seeds category offers a diverse selection of plant seeds, including the rare Lophophora Williamsii. Perfect for enthusiasts and gardeners looking to cultivate unique plants."
+          }
+          
+
+
+          
+
+
+          
     ];
 
     return (
