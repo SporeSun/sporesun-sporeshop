@@ -4,8 +4,17 @@ const typeDefs = `
     displayName: String!
     products: [Product]
   }
+  input CategoryInput {
+    displayName: String!
+    products: [Product]
+  }
 
   type PrePurchase {
+    product: Product
+    cost: Float
+    amount: Int
+  }
+  input PrePurchaseInput {
     product: Product
     cost: Float
     amount: Int
@@ -19,10 +28,20 @@ const typeDefs = `
     description: String
     image: String
   }
+  input ProductInput {
+    price: Float!
+    stock: Int!
+    name: String!
+    description: String
+    image: String
+  }
 
   
   type Tag {
     _id: ID
+    tag: String!
+  }
+  input TagInput {
     tag: String!
   }
 
@@ -34,9 +53,23 @@ const typeDefs = `
     password: String!
     isAdmin: Boolean
   }
+  input UserInput {
+    firstName: String!
+    lastName: String!
+    email: String!
+    password: String!
+    isAdmin: Boolean
+  }
 
   type Transaction {
     _id: ID!
+    date: String!
+    buyer: ID!
+    items: [PrePurchase]!
+    cost: Float!
+    status: String!
+  }
+  input TransactionInput {
     date: String!
     buyer: ID!
     items: [PrePurchase]!
