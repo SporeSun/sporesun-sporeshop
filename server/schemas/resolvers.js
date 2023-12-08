@@ -1,6 +1,7 @@
 const jwt = require('jsonwebtoken');
 const { User, Cart, Category, PrePurchase, Product, Transaction } = require('../models');
 const { signToken, AuthenticationError } = require('../utils/auth');
+const stripe = require('stripe')('sk_test_51OKV4YJe2B9hxOfHeBIHPZTBUjFbikeWoEjl0DEbaoB6DMnf1BVEz7aRwNhPu7p7lEZXBiLBnj3UNppWOl5XNTds00057aGp5N');
 
 const resolvers = {
   Query: {
@@ -34,6 +35,38 @@ const resolvers = {
     getProduct: async (parent, { id }) => {
       const params = id ? { id } : {};
       return Product.find(params);
+    },
+    checkout: async (parent, args, context) => {
+      const url = new URL(context.headers.referer).origin;
+      await Order.create({ products: args.products.map(({ _id }) => _id) });
+      // eslint-disable-next-line camelcase
+      const line_items = [];
+
+      // eslint-disable-next-line no-restricted-syntax
+      for (const product of args.products) {
+        line_items.push({
+          price_data: {
+            currency: 'usd',
+            product_data: {
+              name: product.name,
+              description: product.description,
+              images: [`${url}/images/${product.image}`]
+            },
+            unit_amount: product.price * 100,
+          },
+          quantity: product.purchaseQuantity,
+        });
+      }
+
+      const session = await stripe.checkout.sessions.create({
+        payment_method_types: ['card'],
+        line_items,
+        mode: 'payment',
+        success_url: `${url}/success?session_id={CHECKOUT_SESSION_ID}`,
+        cancel_url: `${url}/`,
+      });
+
+      return { session: session.id };
     },
   },
 
