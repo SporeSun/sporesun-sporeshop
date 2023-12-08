@@ -16,7 +16,7 @@
 
 import { Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
-
+import Cart from "./components/Cart";
 import Footer from "./components/Footer"
 import Home from "./pages/Home";
 import CartScreen from "./pages/CartScreen";
@@ -31,7 +31,7 @@ function App() {
     <Header/>
       <Routes>
         <Route index={true} path="/" element={<Home />} />
-        <Route path="/cart" element={<CartScreen/>} />
+        <Route path="/cart" element={<Cart/>} />
         <Route path="/products" element={<ProductsPage/>} />
         <Route path="/category/:category" element={<CategoryScreen/>} />
         <Route path="/about" element={<About/>} />
