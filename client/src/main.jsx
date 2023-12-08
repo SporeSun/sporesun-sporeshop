@@ -2,6 +2,15 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
+import {
+  ApolloClient,
+  InMemoryCache,
+  ApolloProvider,
+  createHttpLink,
+} from '@apollo/client';
+import { setContext } from '@apollo/client/link/context';
+
+
 import { ChakraProvider } from "@chakra-ui/react"
 import { Provider } from "react-redux";
 import { HashRouter as Router } from 'react-router-dom'; // Change this line
@@ -19,6 +28,26 @@ import ProductsPage from './pages/ProductsPage';
 import CategoryScreen from './pages/CategoryScreen';
 import "./assets/styles/bootstrap.custom.css";
 
+const httpLink = createHttpLink({
+  uri: '/graphql',
+});
+
+const authLink = setContext((_, { headers }) => {
+  const token = localStorage.getItem('id_token');
+  return {
+    headers: {
+      ...headers,
+      authorization: token ? `Bearer ${token}` : '',
+    },
+  };
+});
+
+const client = new ApolloClient({
+  link: authLink.concat(httpLink),
+  cache: new InMemoryCache(),
+});
+
+
 const emotionCache = createCache({
   key: 'emotion-css-cache',
   prepend: true, // ensures styles are prepended to the <head>, instead of appended
@@ -27,29 +56,29 @@ const emotionCache = createCache({
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <App/>,
+    element: <App />,
     errorElement: <div>404</div>,
     children: [
       {
         index: true,
-        element: <Home/>
+        element: <Home />
       },
       {
         path: '/cart',
-        element: <CartScreen/>
+        element: <CartScreen />
       },
       {
         path: '/about',
-        element: <About/>
+        element: <About />
       },
       {
         path: '/contact',
-        element: <Contact/>
+        element: <Contact />
       },
-     
+
       {
         path: "/category/:category",
-        element: <CategoryScreen/>
+        element: <CategoryScreen />
       },
     ]
   }
@@ -57,17 +86,19 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <CacheProvider value={emotionCache}>
-  <ChakraProvider>
-    {/* <Provider store={store}>
+    <ChakraProvider>
+      {/* <Provider store={store}>
     <RouterProvider router={router} />
     </Provider> */}
-    <Provider store={store}>
-    {/* <PersistGate loading={null} persistor={persistor}> */}
-    <Router> 
-        <App />
-      </Router>
-  </Provider>,
-  </ChakraProvider>
+      <Provider store={store}>
+        {/* <PersistGate loading={null} persistor={persistor}> */}
+        <Router>
+          <ApolloProvider client={client}>
+            <App />
+          </ApolloProvider>
+        </Router>
+      </Provider>,
+    </ChakraProvider>
   </CacheProvider>
 );
 
