@@ -4,7 +4,7 @@ import { Box, Flex, Text } from '@chakra-ui/react';
 
 export default function Footer() {
     return (
-        <Box as="footer" bg="purple.800" p={4} color="white"  bottom="0" width="100%">
+        <Box as="footer" bg="purple.800" p={4} color="white" position="fixed" bottom="0" width="100%">
             <Flex justify="space-between" align="center">
                 <Text>&copy; 2023 Spores'n'more</Text>
                 <Flex>

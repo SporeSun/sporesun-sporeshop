@@ -15,7 +15,7 @@ export default function CategoryScreen() {
 
   return (
     <Box p={4}>
-        <h1>Category: {proCategory}</h1>
+        <h1 style={{color: '#EEEEEE'}}>Category: {proCategory}</h1>
       <SimpleGrid columns={{ base: 1, sm: 2, md: 2, lg: 5 }} spacing={4}>
         {filteredProducts.map((product, index) => (
           <Product key={index} product={product} />
