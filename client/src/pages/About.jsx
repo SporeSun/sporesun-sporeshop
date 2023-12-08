@@ -1,13 +1,13 @@
-
 import React from 'react';
+import '../assets/styles/About.css'
 
 export default function About() {
-
-  
     return (
-        <div className='body'>
-           <h1 style={{textAlign:"center"}}>About Us</h1>
-        <p style={{padding:"30px"}}>about us info goes here</p>
+        <div className='about-container'>
+            <h1>About Us</h1>
+            <div className="about-info">
+                <p>About us information goes here</p>
+            </div>
         </div>
     );
 }

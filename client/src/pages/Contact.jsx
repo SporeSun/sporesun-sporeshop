@@ -1,13 +1,15 @@
-
 import React from 'react';
+import '../assets/styles/Contact.css'
+
+; // Import your custom CSS file for styling
 
 export default function Contact() {
-
-  
     return (
-        <div className='body'>
-           <h1 style={{textAlign:"center"}}>Contact Us</h1>
-        <p style={{padding:"30px"}}>Contact infooo goes there</p>
+        <div className='contact-container'>
+            <h1>Contact Us</h1>
+            <div className="contact-info">
+                <p>Contact information goes here</p>
+            </div>
         </div>
     );
 }

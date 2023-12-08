@@ -1,6 +1,6 @@
 import { useDispatch } from 'react-redux';
 import Rating from "./Rating";
-import "./Product.css";
+import "../assets/styles/Product.css";
 import { addToCart } from "../redux/actions/cartActions";
 import {
   Box,
