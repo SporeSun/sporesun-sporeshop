@@ -12,9 +12,9 @@
     "build": "cd client && npm run build"
   },
   "dependencies": {
+    "@apollo/client": "^3.8.8",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
-    
   },
   "devDependencies": {
     "@types/react": "^18.2.37",
