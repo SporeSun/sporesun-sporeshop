@@ -1,9 +1,10 @@
 import React from "react";
-import { Box, SimpleGrid } from "@chakra-ui/react";
+import { Box, SimpleGrid, useQuery } from "@chakra-ui/react";
 import "./home.css";
 import Product from "../components/Product";
 import productData from "../data/products";
 export default function ProductsPage() {
+
   return (
     <>
       <Box p={4}>

@@ -6,9 +6,11 @@ import {
   Box,
   SimpleGrid,
 } from "@chakra-ui/react";
+import { useLazyQuery } from "@apollo/client";
+import { QUERY_CATEGORIES, QUERY_PRODUCTS } from "../utils/queries";
 export default function CategoryScreen() {
-  const { category: proCategory } = useParams();
-
+  const { category: proCategory } = useLazyQuery(QUERY_CATEGORIES)
+  const productData = useLazyQuery(QUERY_PRODUCTS, {category: proCategory._id});
   const filteredProducts = productData.filter(
     (product) => product.category === proCategory
   );
