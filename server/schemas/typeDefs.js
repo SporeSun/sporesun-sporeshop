@@ -5,7 +5,7 @@ const typeDefs = `
     products: [Product]
   }
   input CategoryInput {
-    displayName: String!
+    name: String!
     products: [ProductInput]
   }
 
@@ -103,7 +103,7 @@ const typeDefs = `
   type Mutation {
     login(email: String!, password: String!): Auth
     addUser(firstName: String!, lastName: String!, email: String!, password: String!): Auth
-    addCategory(displayName: String!): Category
+    addCategory(name: String!): Category
     updateCategory: Category
     addToCategory(category: ID!, product: ID!): Category
     removeCategory(catId: String!): Category

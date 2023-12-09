@@ -1,6 +1,5 @@
 import React from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import productData from "../data/products";
 import Product from "../components/Product";
 import {
   Box,
@@ -14,7 +13,7 @@ export default function CategoryScreen() {
   const filteredProducts = productData.filter(
     (product) => product.category === proCategory
   );
-
+    console.log(productData);
   return (
     <Box p={4}>
         <h1 style={{color: '#EEEEEE'}}>Category: {proCategory}</h1>

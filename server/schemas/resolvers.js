@@ -92,8 +92,8 @@ const resolvers = {
       const token = signToken(user);
       return { token, user };
     },
-    addCategory: async(parent, {displayName})=>{
-      return await Category.create({displayName});
+    addCategory: async(parent, {name})=>{
+      return await Category.create({name});
     },
     removeCategory: async(parent, {id})=>{
       return await Category.findOneAndDelete({
