@@ -41,15 +41,13 @@ export const QUERY_ALL_PRODUCTS = gql`
 
 export const QUERY_CATEGORIES = gql`
   {
-    query getCategories {
       getCategories {
         _id
         name
         image
         description
-        products
       }
-    }
+    
     
   }
 `;

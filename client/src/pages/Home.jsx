@@ -13,10 +13,13 @@ export default function Home() {
     if(error){
       return `Error! ${error.message}`;
     }
+    if(data){
+      console.log(data);
+    }
     return (
         <>
             <div className='body'>
-            {data.map((category) => (
+            {data.getCategories.map((category) => (
                 <div key={category._id} className='key'>
                     <Link to={`/category/${category.name}`}>
                     <Card maxW='sm' mx={10} my={10}>
@@ -30,9 +33,7 @@ export default function Home() {
                                 <Text>
                                     {category.description}
                                 </Text>
-                                <Image>
-                                  {category.image}
-                                </Image>
+                                <img src = {category.image}></img>
                             </Stack>
                         </CardBody>
                     </Card>
