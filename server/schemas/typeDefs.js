@@ -1,7 +1,9 @@
 const typeDefs = `
   type Category {
     _id: ID
-    displayName: String!
+    name: String!
+    image: String
+    description: String
     products: [Product]
   }
   input CategoryInput {
