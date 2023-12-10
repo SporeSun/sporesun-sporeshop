@@ -69,6 +69,9 @@ export default function Home() {
                                 <Text>
                                     {category.description}
                                 </Text>
+                                <Image>
+                                  {category.image}
+                                </Image>
                             </Stack>
                         </CardBody>
                     </Card>
