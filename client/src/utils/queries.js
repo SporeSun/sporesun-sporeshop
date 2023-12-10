@@ -41,11 +41,6 @@ export const QUERY_ALL_PRODUCTS = gql`
 
 export const QUERY_CATEGORIES = gql`
   {
-<<<<<<< Updated upstream
-    categories {
-      _id
-      name
-=======
     query getCategories {
       getCategories {
         _id
@@ -53,7 +48,6 @@ export const QUERY_CATEGORIES = gql`
         image
         description
       }
->>>>>>> Stashed changes
     }
     
   }
