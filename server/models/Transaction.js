@@ -5,6 +5,10 @@ const prePurchaseSchema = require('./PrePurchase');
 
 const transactionSchema = new Schema(
   {
+    _id: {
+      type: String,
+      required: true
+    },
     date: {
       type: String,
       required: true,
