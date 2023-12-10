@@ -1,16 +1,22 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './home.css';
 import { Card, Stack, Heading, Text,  Image, CardBody, Grid } from '@chakra-ui/react'
 import { Link } from 'react-router-dom';
 import {QUERY_CATEGORIES} from '../utils/queries';
-import { useLazyQuery } from '@apollo/client';
+import { gql, useLazyQuery, useQuery } from '@apollo/client';
 export default function Home() {
 
-    const categoryData = useLazyQuery(QUERY_CATEGORIES);
+    var {loading, error, data } = useQuery(QUERY_CATEGORIES);
+    if(loading){
+      return 'Loading...'
+    }
+    if(error){
+      return `Error! ${error.message}`;
+    }
     return (
         <>
             <div className='body'>
-            {categoryData.map((category) => (
+            {data.map((category) => (
                 <div key={category._id} className='key'>
                     <Link to={`/category/${category.name}`}>
                     <Card maxW='sm' mx={10} my={10}>

@@ -47,6 +47,7 @@ export const QUERY_CATEGORIES = gql`
         name
         image
         description
+        products
       }
     }
     
