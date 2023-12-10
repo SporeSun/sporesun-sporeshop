@@ -1,5 +1,6 @@
 const { Schema, model } = require('mongoose');
 const bcrypt = require('bcrypt');
+const { v4: uuidv4 } = require("uuid")
 
 // import schema from Book.js
 // const bookSchema = require('./Book');
@@ -8,7 +9,7 @@ const userSchema = new Schema(
   {
     _id: {
       type: String,
-      required: true
+      default: uuidv4
     },
     firstName: {
       type: String,
