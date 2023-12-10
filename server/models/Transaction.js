@@ -2,12 +2,13 @@ const { Schema, model } = require('mongoose');
 const bcrypt = require('bcrypt');
 const User = require('./User');
 const prePurchaseSchema = require('./PrePurchase');
+const { v4: uuidv4 } = require("uuid")
 
 const transactionSchema = new Schema(
   {
     _id: {
       type: String,
-      required: true
+      default: uuidv4
     },
     date: {
       type: String,
