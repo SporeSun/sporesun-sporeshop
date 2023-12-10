@@ -5,7 +5,7 @@ const typeDefs = `
     products: [Product]
   }
   input CategoryInput {
-    displayName: String!
+    name: String!
     products: [ProductInput]
   }
 
@@ -24,7 +24,9 @@ const typeDefs = `
     _id: ID
     price: Float!
     stock: Int!
+    brand: String
     name: String!
+    discount: Float
     description: String
     image: String
   }
@@ -89,7 +91,7 @@ const typeDefs = `
   type Query {
     getUser(id: String!): User
     getUsers: [User]
-    getCategory(id: String!): Category
+    getCategory(id: ID!): Category
     getCategories: [Category]
     getTransaction(id: String!): Transaction
     getTransactions: [Transaction]
@@ -103,12 +105,12 @@ const typeDefs = `
     addUser(firstName: String!, lastName: String!, email: String!, password: String!): Auth
     addCategory(name: String!): Category
     updateCategory: Category
-    addToCategory(category: CategoryInput!, product: ProductInput!): Category
+    addToCategory(category: ID!, product: ID!): Category
     removeCategory(catId: String!): Category
     removeFromCategory(categoryID: String!, productId: String!): Category
     addTransaction(buyer: UserInput, cart: [PrePurchaseInput]!): Transaction
     addProduct(name: String, stock: Int, price: Float, description: String, image: String): Product
-    updateProduct: Product
+    updateProduct(data: ProductInput): Product
     removeProduct(productId: String!): Product
     createPrePurchase(product: ProductInput!, amount: Int!): PrePurchase
   }

@@ -2,9 +2,12 @@ import React from 'react';
 import './home.css';
 import { Card, Stack, Heading, Text,  Image, CardBody, Grid } from '@chakra-ui/react'
 import { Link } from 'react-router-dom';
+import {QUERY_CATEGORIES} from '../utils/queries';
+import { useLazyQuery } from '@apollo/client';
 export default function Home() {
 
-    const categoryData = [
+    const categoryData = useLazyQuery(QUERY_CATEGORIES)
+    /*const categoryData = [
         {
             _id: 1,
             src: 'https://i.imgur.com/PILVuRL_d.webp?maxwidth=760&fidelity=grand',
@@ -47,7 +50,7 @@ export default function Home() {
             description: "Our Seeds category offers a diverse selection of plant seeds, including the rare Lophophora Williamsii. Perfect for enthusiasts and gardeners looking to cultivate unique plants."
           }
           
-    ];
+    ];*/
 
     return (
         <>

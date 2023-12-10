@@ -1,11 +1,11 @@
 const { Schema, model } = require('mongoose');
 const bcrypt = require('bcrypt');
-const productSchema = require('./Product');
+const Product = require('./Product');
 
 const prePurchaseSchema = new Schema(
   {
     product: {
-      type: productSchema,
+      type: Schema.Types.ObjectId,
       required: true,
     },
     

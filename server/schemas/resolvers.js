@@ -11,14 +11,13 @@ const resolvers = {
     },
     getUser: async (parent, { id }) => {
       const params = id ? { id } : {};
-      return User.find(params);
+      return User.findOne(params);
     },
     getCategories: async () => {
       return Category.find({});
     },
     getCategory: async (parent, { id }) => {
-      const params = id ? { id } : {};
-      return Category.find(params);
+      return Category.findOne({_id: id});
     },
     
     getTransactions: async () => {
@@ -26,7 +25,7 @@ const resolvers = {
     },
     getTransaction: async (parent, { id }) => {
       const params = id ? { id } : {};
-      return Transaction.find(params);
+      return Transaction.findOne(params);
     },
     
     getProducts: async () => {
@@ -34,7 +33,7 @@ const resolvers = {
     },
     getProduct: async (parent, { id }) => {
       const params = id ? { id } : {};
-      return Product.find(params);
+      return Product.findOne(params);
     },
     checkout: async (parent, args, context) => {
       const url = new URL(context.headers.referer).origin;
@@ -101,9 +100,9 @@ const resolvers = {
         _id: id
       });
     },
-    addToCategory: async(parent, {categoryId, product})=>{
+    addToCategory: async(parent, {category, product})=>{
       return await Category.findOneAndUpdate(
-        {_id: categoryId},
+        {_id: category},
         {$addToSet: {products: product}},
         {new: true}
         );
@@ -117,6 +116,13 @@ const resolvers = {
     },
     addProduct: async(parent, {name, description, image, stock, price})=>{
       return await Product.create({name, description, image, stock, price});
+    },
+    updateProduct: async(parent, {id, data}) => {
+      return await Product.findOneAndUpdate(
+        {_id: id},
+        data,
+      {new: true}
+      )
     },
     removeProduct: async(parent, {id})=>{
       return await Product.findOneAndDelete({

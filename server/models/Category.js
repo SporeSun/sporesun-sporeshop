@@ -4,13 +4,19 @@ const productSchema = require('./Product');
 
 const categorySchema = new Schema(
   {
-    displayName: {
+    name: {
       type: String,
       required: true,
       unique: true,
     },
+    description:{
+      type: String
+    },
+    image:{
+      type: String,
+    },
     // set savedBooks to be an array of data that adheres to the bookSchema
-    products: [productSchema],
+    products: [Schema.Types.ObjectId],
   },
   // set this to use virtual below
   {
