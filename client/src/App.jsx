@@ -1,7 +1,14 @@
-// import { Outlet } from 'react-router-dom';
-// import Header from './components/Header.jsx';
-// import Footer from './components/Footer.jsx';
-
+import { Outlet } from 'react-router-dom';
+import { onError } from "@apollo/client/link/error";
+import {
+  ApolloClient,
+  InMemoryCache,
+  ApolloProvider,
+  createHttpLink,
+} from '@apollo/client';
+import { setContext } from '@apollo/client/link/context';
+import Header from "./components/Header";
+import Footer from "./components/Footer"
 // export default function App() {
 //     return (
 //         <div>
@@ -11,34 +18,49 @@
 //         </div>
 //     );
 // }
+const httpLink = createHttpLink({
+  uri: '/graphql',
+});
 
+const authLink = setContext((_, { headers }) => {
+  const token = localStorage.getItem('id_token');
+  return {
+    headers: {
+      ...headers,
+      authorization: token ? `Bearer ${token}` : '',
+    },
+  };
+});
 
+  const errorLink = onError(({ graphQLErrors, networkError }) => {
+    if (graphQLErrors) {
+      graphQLErrors.forEach(({ message, locations, path }) =>
+        console.log(
+          `[GraphQL error]: Message: ${message}, Location: ${locations}, Path: ${path}`
+        )
+      );
+    }
+    if (networkError) {
+      console.log(`[Network error]: ${networkError}`);
+    }
+});
 
-import { Routes, Route } from "react-router-dom";
-import Header from "./components/Header";
-import Cart from "./components/Cart";
-import Footer from "./components/Footer"
-import Home from "./pages/Home";
-import CartScreen from "./pages/CartScreen";
-import About from "./pages/About";
-import Contact from "./pages/Contact";
-import ProductsPage from "./pages/ProductsPage";
-import CategoryScreen from "./pages/CategoryScreen";
+const client = new ApolloClient({
+  link: errorLink.concat(authLink.concat(httpLink)),
+  cache: new InMemoryCache(),
+});
 
 function App() {
   return (
     <>
-    <Header/>
-      <Routes>
-        <Route index={true} path="/" element={<Home />} />
-        <Route path="/cart" element={<Cart/>} />
-        <Route path="/products" element={<ProductsPage/>} />
-        <Route path="/category/:category" element={<CategoryScreen/>} />
-        <Route path="/about" element={<About/>} />
-        <Route path="/contact" element={<Contact/>} />
-       </Routes>
+    <ApolloProvider client = {client}>
+      <Header/>
+      <main>
+        <Outlet />
+      </main>
       <Footer/>
-    </>
+    </ApolloProvider>
+      </>
   );
 }
 
