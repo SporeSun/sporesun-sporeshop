@@ -25,6 +25,9 @@ const productSchema = new Schema(
       type: Number,
       required: true,
     },
+    category: {
+      type: String,
+    },
   },
   // set this to use virtual below
   {
