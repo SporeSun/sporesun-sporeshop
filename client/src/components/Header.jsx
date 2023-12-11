@@ -25,6 +25,7 @@ import {
   EditIcon,
   HamburgerIcon,
 } from "@chakra-ui/icons";
+import Auth from "../utils/auth"
 
 
 const Header = () => {
@@ -75,23 +76,24 @@ const Header = () => {
             </MenuItem>
             <MenuItem>
               <Link to ="/orderhistory">Order History</Link>
-            <MenuItem>
-              Psilocybe Cubensis Spores
             </MenuItem>
             <MenuItem>
-              Exotic Psilocybe Spores
+              <Link to={`/category/Psilocybe Cubensis Spores`}>Psilocybe Cubensis Spores</Link>
             </MenuItem>
             <MenuItem>
-              Gourmet and Medicinal Cultures
+              <Link to={`/category/Exotic Psilocybe Spores`}>Exotic Psilocybe Spores</Link>
             </MenuItem>
             <MenuItem>
-              Live Plants
+              <Link to={`/category/Gourmet and Medicinal Cultures`}>Gourmet and Medicinal Cultures</Link>
             </MenuItem>
             <MenuItem>
-              Seeds
+              <Link to={`/category/Live Plants`}>Live Plants</Link>
             </MenuItem>
             <MenuItem>
-              Lab Supplies
+              <Link to={`/category/Seeds`}>Seeds</Link>
+            </MenuItem>
+            <MenuItem>
+            <Link to={`/category/Lab Supplies`}>Lab Supplies</Link>
             </MenuItem>
           </MenuList>
         </Menu>
