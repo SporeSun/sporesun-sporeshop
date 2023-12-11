@@ -26,6 +26,7 @@ export const QUERY_ALL_PRODUCTS = gql`
     getProducts {
       _id
       name
+      image
       description
       price
       stock
