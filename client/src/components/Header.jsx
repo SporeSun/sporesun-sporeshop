@@ -75,6 +75,23 @@ const Header = () => {
             </MenuItem>
             <MenuItem>
               <Link to ="/orderhistory">Order History</Link>
+            <MenuItem>
+              Psilocybe Cubensis Spores
+            </MenuItem>
+            <MenuItem>
+              Exotic Psilocybe Spores
+            </MenuItem>
+            <MenuItem>
+              Gourmet and Medicinal Cultures
+            </MenuItem>
+            <MenuItem>
+              Live Plants
+            </MenuItem>
+            <MenuItem>
+              Seeds
+            </MenuItem>
+            <MenuItem>
+              Lab Supplies
             </MenuItem>
           </MenuList>
         </Menu>
