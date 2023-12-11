@@ -2,18 +2,18 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
-import {
-  ApolloClient,
-  InMemoryCache,
-  ApolloProvider,
-  createHttpLink,
-} from '@apollo/client';
-import { setContext } from '@apollo/client/link/context';
+// import {
+//   ApolloClient,
+//   InMemoryCache,
+//   ApolloProvider,
+//   createHttpLink,
+// } from '@apollo/client';
+// import { setContext } from '@apollo/client/link/context';
 
 
 import { ChakraProvider } from "@chakra-ui/react"
 import { Provider } from "react-redux";
-import { HashRouter as Router } from 'react-router-dom'; // Change this line
+// import { HashRouter as Router } from 'react-router-dom'; // Change this line
 import store from "./redux/store";
 import createCache from '@emotion/cache';
 import { CacheProvider } from '@emotion/react';
@@ -28,24 +28,24 @@ import ProductsPage from './pages/ProductsPage';
 import CategoryScreen from './pages/CategoryScreen';
 import "./assets/styles/bootstrap.custom.css";
 
-const httpLink = createHttpLink({
-  uri: '/graphql',
-});
+// const httpLink = createHttpLink({
+//   uri: '/graphql',
+// });
 
-const authLink = setContext((_, { headers }) => {
-  const token = localStorage.getItem('id_token');
-  return {
-    headers: {
-      ...headers,
-      authorization: token ? `Bearer ${token}` : '',
-    },
-  };
-});
+// const authLink = setContext((_, { headers }) => {
+//   const token = localStorage.getItem('id_token');
+//   return {
+//     headers: {
+//       ...headers,
+//       authorization: token ? `Bearer ${token}` : '',
+//     },
+//   };
+// });
 
-const client = new ApolloClient({
-  link: authLink.concat(httpLink),
-  cache: new InMemoryCache(),
-});
+// const client = new ApolloClient({
+//   link: authLink.concat(httpLink),
+//   cache: new InMemoryCache(),
+// });
 
 
 const emotionCache = createCache({
@@ -80,6 +80,10 @@ const router = createBrowserRouter([
         path: "/category/:category",
         element: <CategoryScreen />
       },
+      {
+        path: "/products",
+        element: <ProductsPage />
+      }
     ]
   }
 ])
@@ -92,11 +96,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     </Provider> */}
       <Provider store={store}>
         {/* <PersistGate loading={null} persistor={persistor}> */}
-        <Router>
-          <ApolloProvider client={client}>
-            <App />
-          </ApolloProvider>
-        </Router>
+        <RouterProvider router={router} />
       </Provider>,
     </ChakraProvider>
   </CacheProvider>
