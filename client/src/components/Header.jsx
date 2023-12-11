@@ -29,6 +29,10 @@ import {
 
 const Header = () => {
   const {cartItems} = useSelector((state) => state.cart);
+  const logout = (event) => {
+    event.preventDefault();
+    Auth.logout();
+  };
 
   //destructuring cart items
   console.log("llllllllllllllllll", cartItems)
@@ -56,20 +60,21 @@ const Header = () => {
             aria-label="Options"
             icon={<HamburgerIcon />}
             mx={20}
-            my={6}
+            my={6}  
           />
-          <MenuList>
-            <MenuItem icon={<AddIcon />} command="⌘T">
-              New Tab
+          <MenuList textColor={"black"}>
+            <MenuItem>
+              <Link to ="/">Home</Link>
             </MenuItem>
-            <MenuItem icon={<ExternalLinkIcon />} command="⌘N">
-              New Window
+            <MenuItem>
+              <Link to ="/login">Login</Link>
             </MenuItem>
-            <MenuItem icon={<RepeatIcon />} command="⌘⇧N">
-              Open Closed Tab
+            <MenuItem onClick={logout}>Logout</MenuItem>
+            <MenuItem>
+              <Link to ="/signup">Sign Up!</Link>
             </MenuItem>
-            <MenuItem icon={<EditIcon />} command="⌘O">
-              Open File...
+            <MenuItem>
+              <Link to ="/orderhistory">Order History</Link>
             </MenuItem>
           </MenuList>
         </Menu>
