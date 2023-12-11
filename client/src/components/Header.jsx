@@ -29,6 +29,10 @@ import {
 
 const Header = () => {
   const {cartItems} = useSelector((state) => state.cart);
+  const logout = (event) => {
+    event.preventDefault();
+    Auth.logout();
+  };
 
   //destructuring cart items
   console.log("llllllllllllllllll", cartItems)
@@ -56,25 +60,37 @@ const Header = () => {
             aria-label="Options"
             icon={<HamburgerIcon />}
             mx={20}
-            my={6}
+            my={6}  
           />
-          <MenuList>
-            <MenuItem style={{color: 'black'}}>
+          <MenuList textColor={"black"}>
+            <MenuItem>
+              <Link to ="/">Home</Link>
+            </MenuItem>
+            <MenuItem>
+              <Link to ="/login">Login</Link>
+            </MenuItem>
+            <MenuItem onClick={logout}>Logout</MenuItem>
+            <MenuItem>
+              <Link to ="/signup">Sign Up!</Link>
+            </MenuItem>
+            <MenuItem>
+              <Link to ="/orderhistory">Order History</Link>
+            <MenuItem>
               Psilocybe Cubensis Spores
             </MenuItem>
-            <MenuItem style={{color: 'black'}}>
+            <MenuItem>
               Exotic Psilocybe Spores
             </MenuItem>
-            <MenuItem style={{color: 'black'}}>
+            <MenuItem>
               Gourmet and Medicinal Cultures
             </MenuItem>
-            <MenuItem style={{color: 'black'}}>
+            <MenuItem>
               Live Plants
             </MenuItem>
-            <MenuItem style={{color: 'black'}}>
+            <MenuItem>
               Seeds
             </MenuItem>
-            <MenuItem style={{color: 'black'}}>
+            <MenuItem>
               Lab Supplies
             </MenuItem>
           </MenuList>

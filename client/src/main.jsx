@@ -26,6 +26,9 @@ import About from './pages/About';
 import Contact from './pages/Contact';
 import ProductsPage from './pages/ProductsPage';
 import CategoryScreen from './pages/CategoryScreen';
+import Login from './pages/Login';
+import Signup from './pages/Signup';
+import OrderHistory from './pages/OrderHistory';
 import "./assets/styles/bootstrap.custom.css";
 
 // const httpLink = createHttpLink({
@@ -83,6 +86,18 @@ const router = createBrowserRouter([
       {
         path: "/products",
         element: <ProductsPage />
+      },
+      {
+        path: "/signup",
+        element: <Signup />
+      },
+      {
+        path: "/login",
+        element: <Login />
+      },
+      {
+        path: "/orderhistory",
+        element: <OrderHistory />
       }
     ]
   }
