@@ -59,17 +59,23 @@ const Header = () => {
             my={6}
           />
           <MenuList>
-            <MenuItem icon={<AddIcon />} command="⌘T">
-              New Tab
+            <MenuItem style={{color: 'black'}}>
+              Psilocybe Cubensis Spores
             </MenuItem>
-            <MenuItem icon={<ExternalLinkIcon />} command="⌘N">
-              New Window
+            <MenuItem style={{color: 'black'}}>
+              Exotic Psilocybe Spores
             </MenuItem>
-            <MenuItem icon={<RepeatIcon />} command="⌘⇧N">
-              Open Closed Tab
+            <MenuItem style={{color: 'black'}}>
+              Gourmet and Medicinal Cultures
             </MenuItem>
-            <MenuItem icon={<EditIcon />} command="⌘O">
-              Open File...
+            <MenuItem style={{color: 'black'}}>
+              Live Plants
+            </MenuItem>
+            <MenuItem style={{color: 'black'}}>
+              Seeds
+            </MenuItem>
+            <MenuItem style={{color: 'black'}}>
+              Lab Supplies
             </MenuItem>
           </MenuList>
         </Menu>
