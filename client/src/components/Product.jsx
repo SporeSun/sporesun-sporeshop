@@ -38,6 +38,7 @@ const Product = ({ product }) => {
           alignItems="center"
           fontSize={["sm", "md", "lg"]}
         >
+          <div>{product.description}</div>
           <ReactStars
             edit={false}
             color={"rgba(20, 20, 20, 0.1)"}
