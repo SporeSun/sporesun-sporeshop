@@ -43,10 +43,10 @@ const Product = ({ product }) => {
             color={"rgba(20, 20, 20, 0.1)"}
             activeColor={"#FFB319"}
             size={["12px", "15px", "20px"]}
-            value={product?.rating}
+            value={product?.rating || 0}
             isHalf={true}
           />
-          <span>{`${product?.numReviews} reviews`}</span>
+          <span>{`${product?.numReviews || 0} reviews`}</span>
         </Text>
         <Text as="h3">${product.price}</Text>
         <Button
