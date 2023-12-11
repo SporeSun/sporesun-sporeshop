@@ -24,7 +24,7 @@ db.once('open', async () => {
       description:
         "A visually striking variety, Avery's Albino is known for its pure white appearance.",
       image: 'https://i.imgur.com/oEC8pLk_d.webp?maxwidth=760&fidelity=grand',
-      category: categories[0]._id,
+      category: categories[0].name,
       price: 15.00,
       stock: 50
     },
@@ -33,13 +33,13 @@ db.once('open', async () => {
       description:
         "A unique and potent variety, Choda MelMak is a favorite among cultivators.",
       image: 'https://i.imgur.com/yirURMn_d.webp?maxwidth=760&fidelity=grand',
-      category: categories[0]._id,
+      category: categories[0].name,
       price: 15.00,
       stock: 20
     },
     {
       name: 'Golden Teacher',
-      category: categories[0]._id,
+      category: categories[0].name,
       description:
         "Famed for its insightful experiences, Golden Teacher is a top choice for enthusiasts.",
       image: 'https://i.imgur.com/CjRBXoX_d.webp?maxwidth=1520&fidelity=grand',
@@ -48,7 +48,7 @@ db.once('open', async () => {
     },
     {
       name: 'Hydra',
-      category: categories[0]._id,
+      category: categories[0].name,
       description:
         "A robust and resilient variety, Hydra is known for its vigorous growth.",
       image: 'https://i.imgur.com/NcZMM4T_d.webp?maxwidth=1520&fidelity=grand',
@@ -57,7 +57,7 @@ db.once('open', async () => {
     },
     {
       name: 'Psilocybe Natalensis',
-      category: categories[1]._id,
+      category: categories[1].name,
       description:
         'A rare and potent variety of Psilocybe mushroom, known for its distinctive properties.',
       image: 'https://i.imgur.com/PILVuRL_d.webp?maxwidth=760&fidelity=grand',
@@ -66,7 +66,7 @@ db.once('open', async () => {
     },
     {
       name: "Psilocybe Caerulipes",
-      category: categories[1]._id,
+      category: categories[1].name,
       description:
         "A unique species of Psilocybe mushroom, valued for its blue-stemmed appearance.",
       image: 'https://i.imgur.com/2VaQUSS_d.webp?maxwidth=760&fidelity=grand',
@@ -75,7 +75,7 @@ db.once('open', async () => {
     },
     {
       name: "Psilocybe Subaeruginosa",
-      category: categories[1]._id,
+      category: categories[1].name,
       description:
         "Known for its robust growth and potent effects, a favorite among mycologists.",
       image: 'https://i.imgur.com/tXpKMMz_d.webp?maxwidth=760&fidelity=grand',
@@ -84,7 +84,7 @@ db.once('open', async () => {
     },
     {
       name: "APE x Natalensis",
-      category: categories[1]._id,
+      category: categories[1].name,
       description:
         "A hybrid variety combining the best traits of APE and Natalensis mushrooms.",
       image: 'https://i.imgur.com/e1xTT8A_d.webp?maxwidth=760&fidelity=grand',
@@ -93,7 +93,7 @@ db.once('open', async () => {
     },
     {
       name: "Brown Beech Mushrooms",
-      category: categories[2]._id,
+      category: categories[2].name,
       description: "Delicious and nutritious, these mushrooms are a favorite in gourmet cooking.",
       image: 'https://i.imgur.com/Izp4vM2_d.webp?maxwidth=760&fidelity=grand',
       price: 20.00,
@@ -101,7 +101,7 @@ db.once('open', async () => {
     },
     {
       name: "Lion's Mane",
-      category: categories[2]._id,
+      category: categories[2].name,
       description:
         "Renowned for its cognitive and neurological health benefits, a must for health enthusiasts.",
       image: 'https://i.imgur.com/WXBElSJ_d.webp?maxwidth=760&fidelity=grand',
@@ -110,7 +110,7 @@ db.once('open', async () => {
     },
     {
       name: 'Antler Reishi',
-      category: categories[2]._id,
+      category: categories[2].name,
       description:
         "A unique medicinal mushroom, prized for its therapeutic properties.",
       image: 'https://i.imgur.com/g3UJKhF_d.webp?maxwidth=760&fidelity=grand',
@@ -119,7 +119,7 @@ db.once('open', async () => {
     },
     {
       name: 'King Oyster Mushroom',
-      category: categories[2]._id,
+      category: categories[2].name,
       description:
         "A popular choice for culinary use, known for its meaty texture and rich flavor.",
       image: 'https://i.imgur.com/TZjZVTw_d.webp?maxwidth=760&fidelity=grand',
@@ -128,7 +128,7 @@ db.once('open', async () => {
     },
     {
       name: 'Sweet Basil',
-      category: categories[3]._id,
+      category: categories[3].name,
       description:
         "An essential herb for any garden, known for its aromatic leaves and culinary versatility.",
       image: 'https://i.imgur.com/phK66nM.jpg',
@@ -137,7 +137,7 @@ db.once('open', async () => {
     },
     {
       name: 'Curry Tree',
-      category: categories[3]._id,
+      category: categories[3].name,
       description:
         "A tropical to sub-tropical tree, its leaves are used in many dishes for added flavor.",
       image: 'https://i.imgur.com/m7jscmZ.jpg',
@@ -146,7 +146,7 @@ db.once('open', async () => {
     },
     {
       name: 'Trichocereus Terscheckii',
-      category: categories[3]._id,
+      category: categories[3].name,
       description:
         "A towering cactus species, known for its impressive size and ornamental value.",
       image: 'https://i.imgur.com/PXqtcfv.jpg',
@@ -155,7 +155,7 @@ db.once('open', async () => {
     },
     {
       name: 'Lopophora Williamsii',
-      category: categories[4]._id,
+      category: categories[4].name,
       description:
         "Rare cactus seeds, known for their unique properties and historical significance. Pack of 10 seeds",
       image: 'https://i.imgur.com/m7jscmZ.jpg',
@@ -164,7 +164,7 @@ db.once('open', async () => {
     },
     {
       name: 'Prepared Malt-Yeast Agar',
-      category: categories[5]._id,
+      category: categories[5].name,
       description:
         "Ideal for mushroom cultivation, this agar is a staple in any mycology lab. Sleeve of 10 plates",
       image: 'https://i.imgur.com/m7jscmZ.jpg',

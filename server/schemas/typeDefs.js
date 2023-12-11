@@ -31,6 +31,7 @@ const typeDefs = `
     discount: Float
     description: String
     image: String
+    category: String
   }
   input ProductInput {
     price: Float!
@@ -94,6 +95,7 @@ const typeDefs = `
     getUser(id: String!): User
     getUsers: [User]
     getCategory(id: ID!): Category
+    getCategoryByName(name: String!): Category
     getCategories: [Category]
     getTransaction(id: String!): Transaction
     getTransactions: [Transaction]

@@ -20,6 +20,10 @@ const resolvers = {
       return Category.findOne({_id: id});
     },
     
+    getCategoryByName: async (parent, { name }) => {
+      return Category.findOne({name: name});
+    },
+    
     getTransactions: async () => {
       return Transaction.find({});
     },
