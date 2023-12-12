@@ -115,7 +115,7 @@ const Header = () => {
               }}
             >
               
-              {cartItems?.length}
+              {cartItems.reduce((acc, item) => acc + item.qty, 0)}
             </Badge>
           </Box>
         </Link>
