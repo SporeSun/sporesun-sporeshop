@@ -22,13 +22,21 @@ import {
   Card,
 } from "react-bootstrap";
 import { FaTrash } from "react-icons/fa";
+import { useEffect, useState } from 'react';
+import { QUERY_CHECKOUT } from '../utils/queries';
 import Message from "../components/Message";
 import { useSelector, useDispatch } from 'react-redux';
+import { gql, useLazyQuery, useQuery } from '@apollo/client';
 import { addToCart, removeFromCart } from '../redux/actions/cartActions';
+import { loadStripe } from '@stripe/stripe-js';
+
+const stripePromise = loadStripe('pk_test_51OKV4YJe2B9hxOfHBQcu86w2pTFL2Q7GIe9VfEhmuHhCeOP8tRwrGFHA33x5OHiXBq9959HnyLw8Kij4Mcm2prfd00veCARTjd');
 
 const CartScreen = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
+  const state = useState();
+  const [getCheckout, { data }] = useLazyQuery(QUERY_CHECKOUT);
 
    const cart = useSelector((state) => state.cart);
    //destructuring cart items
@@ -44,8 +52,20 @@ const CartScreen = () => {
     dispatch(removeFromCart(id))
   };
 
+  useEffect(() => {
+    if (data) {
+      stripePromise.then((res) => {
+        res.redirectToCheckout({ sessionId: data.checkout.session });
+      });
+    }
+  }, [data]);
+  console.log("cart state" + state.cart)
   const checkoutHandler =  () => {
-    navigate("/login?redirect=/shipping")
+    getCheckout({
+      variables: { 
+        products: [...state.cart],
+      },
+    });
   };
 
   return (
