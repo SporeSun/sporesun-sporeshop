@@ -101,7 +101,7 @@ const typeDefs = `
     getTransactions: [Transaction]
     getProduct(id: String!): Product
     getProducts: [Product]
-    checkout(products: [ID]!): Checkout
+    checkout(products: [ProductInput]!): Checkout
   }
 
   type Mutation {
