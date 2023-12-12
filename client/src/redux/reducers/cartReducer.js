@@ -5,33 +5,6 @@ import { updateCart } from "../../utils/cartUtils";
 const initialState = localStorage.getItem("cart")
 ? JSON.parse(localStorage.getItem("cart"))
 : { cartItems: [], shippingAddress: {}, payment: "PayPal" };
-  
-//   const cartReducer = (state = initialState, action) => {
-//     switch (action.type) {
-//       case 'ADD_TO_CART':
-//         console.log(hhhhhhhhhhhdddddddddddddddddd)
-//         return {
-//           ...state,
-//           cartItems: [...state.cartItems, action.payload],
-//         };
-//       case 'REMOVE_FROM_CART':
-//         return {
-//           ...state,
-//           cartItems: state.cartItems.filter(item => item.id !== action.payload),
-//         };
-//       case 'CLEAR_CART':
-//         return {
-//           ...state,
-//           cartItems: [],
-//         };
-//       default:
-//         return state;
-//     }
-//   };
-  
-//   export default cartReducer;
-  
-
 
 const cartSlice = createSlice({
     name: "cart",
