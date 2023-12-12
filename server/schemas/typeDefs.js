@@ -14,12 +14,12 @@ const typeDefs = `
   type PrePurchase {
     product: Product
     cost: Float
-    amount: Int
+    qty: Int
   }
   input PrePurchaseInput {
     product: ProductInput
     cost: Float
-    amount: Int
+    qty: Int
   }
 
   type Product {
@@ -32,6 +32,7 @@ const typeDefs = `
     description: String
     image: String
     category: String
+    qty: Int
   }
   input ProductInput {
     _id: ID
