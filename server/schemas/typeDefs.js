@@ -34,9 +34,16 @@ const typeDefs = `
     category: String
   }
   input ProductInput {
-    price: Float!
-    stock: Int!
-    name: String!
+    _id: ID
+    price: Float
+    stock: Int
+    name: String
+    discount: Float
+    countInStock: Int
+    category: String
+    numReviews: Int
+    brand: String
+    rating: Float
     description: String
     image: String
   }

@@ -60,7 +60,7 @@ const CartScreen = () => {
   }, [data]);
   console.log("cart state" + state.cart)
   const checkoutHandler =  () => {
-    getCheckout({
+    var {loading, error, data} = getCheckout({
       variables: { 
         products: [...cartItems],
       },

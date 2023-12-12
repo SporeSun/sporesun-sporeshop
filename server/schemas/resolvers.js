@@ -41,7 +41,13 @@ const resolvers = {
     },
     checkout: async (parent, args, context) => {
       const url = new URL(context.headers.referer).origin;
-      await Order.create({ products: args.products.map(({ _id }) => _id) });
+      var sum = 0;
+      args.products.map((product) => sum += product.price);
+      console.log(sum);
+      await Transaction.create({ products: args.products.map(({ _id }) => _id),
+      cost:  sum,
+      date: Date.now(),
+      status: "pending"});
       // eslint-disable-next-line camelcase
       const line_items = [];
 
@@ -50,6 +56,7 @@ const resolvers = {
         line_items.push({
           price_data: {
             currency: 'usd',
+            quantity: product.stock,
             product_data: {
               name: product.name,
               description: product.description,
