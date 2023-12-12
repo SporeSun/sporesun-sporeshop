@@ -38,11 +38,10 @@ const CartScreen = () => {
   const state = useState();
   const [getCheckout, { data }] = useLazyQuery(QUERY_CHECKOUT);
 
-   const cart = useSelector((state) => state.cart);
+   const cart = JSON.parse(localStorage.getItem("cart"));
    //destructuring cart items
    const { cartItems } = cart;
-   console.log("cart...........", cartItems)
-
+   console.log("cart...........", cartItems);
 
    const addToCartHandler = async (product, qty) => {
     dispatch(addToCart({...product, qty}))
@@ -63,7 +62,7 @@ const CartScreen = () => {
   const checkoutHandler =  () => {
     getCheckout({
       variables: { 
-        products: [...state.cart],
+        products: [...cartItems],
       },
     });
   };
