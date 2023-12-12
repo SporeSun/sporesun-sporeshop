@@ -46,6 +46,7 @@ const typeDefs = `
     rating: Float
     description: String
     image: String
+    qty: Int
   }
 
   
