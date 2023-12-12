@@ -56,7 +56,6 @@ const resolvers = {
         line_items.push({
           price_data: {
             currency: 'usd',
-            quantity: product.stock,
             product_data: {
               name: product.name,
               description: product.description,
@@ -64,7 +63,7 @@ const resolvers = {
             },
             unit_amount: product.price * 100,
           },
-          quantity: product.purchaseQuantity,
+          quantity: product.purchaseQuantity || 1,
         });
       }
 
