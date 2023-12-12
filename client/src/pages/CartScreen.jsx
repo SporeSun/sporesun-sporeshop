@@ -20,6 +20,7 @@ import {
   Form,
   Button,
   Card,
+  FormLabel,
 } from "react-bootstrap";
 import { FaTrash } from "react-icons/fa";
 import { useEffect, useState } from 'react';
@@ -97,7 +98,7 @@ const CartScreen = () => {
                         addToCartHandler(item, Number(e.target.value))
                       }
                     >
-                      {[...Array(item.countInStock).keys()].map((x) => (
+                      {[...Array(item.qty).keys()].map((x) => (
                         <option key={x + 1} value={x + 1}>
                           {x + 1}
                         </option>
