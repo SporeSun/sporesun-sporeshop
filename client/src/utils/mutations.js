@@ -37,10 +37,9 @@ export const ADD_CATEGORY = gql`
     ) {
         addCategory(name: $name){
             _id
-            displayName
+            name
             products {
                 _id
-                parent
                 price
                 stock
                 name
