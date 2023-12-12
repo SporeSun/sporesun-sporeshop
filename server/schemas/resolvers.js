@@ -73,6 +73,10 @@ const resolvers = {
         mode: 'payment',
         success_url: `${url}/success?session_id={CHECKOUT_SESSION_ID}`,
         cancel_url: `${url}/`,
+        billing_address_collection: 'required',
+        shipping_address_collection: {
+          allowed_countries: ['US']
+        }
       });
 
       return { session: session.id };
