@@ -34,7 +34,6 @@ const typeDefs = `
     category: String
   }
   input ProductInput {
-    __typename: String
     _id: ID
     price: Float
     stock: Int
