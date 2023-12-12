@@ -9,7 +9,7 @@ const prePurchaseSchema = new Schema(
       required: true,
     },
     
-    amount: {
+    qty: {
       type: Number,
       required: true,
     },
