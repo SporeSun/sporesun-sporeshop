@@ -83,7 +83,6 @@ y
 * [![Chakra][Chakra-UI.com]][Chakra-url]
 * [![Node.js][Node.js]][Node-url]
 * [![Express][Express.js]][Express-url]
-* [![JQuery][JQuery.com]][JQuery-url]
 * [![MongoDB][MongoDB.com]][MongoDB-url]
 * [![JWT][JWT.io]][JWT-url]
 
@@ -190,10 +189,15 @@ Project Link: [https://github.com/SporeSun/sporesun-sporeshop](https://github.co
 
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
-
-* []()
-* []()
-* []()
+* [Choose an Open Source License](https://choosealicense.com)
+* [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
+* [Malven's Flexbox Cheatsheet](https://flexbox.malven.co/)
+* [Malven's Grid Cheatsheet](https://grid.malven.co/)
+* [Img Shields](https://shields.io)
+* [Font Awesome](https://fontawesome.com)
+* [React Icons](https://react-icons.github.io/react-icons/search)
+* [Rutgers FullStack Flex Web Development Bootcamp](https://bootcamp.rutgers.edu/coding/)
+* [Best-README-Template](https://github.com/othneildrew/Best-README-Template)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
