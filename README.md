@@ -178,7 +178,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 * Neil Holloway - [@twitter_handle](https://twitter.com/SporeSunEnt) - sporesun@protonmail.com
 * Devin Amlen - [@twitter_handle](https://twitter.com/twitter_handle) - email@email_client.com
-* Cristian Reyes - [@twitter_handle](https://twitter.com/twitter_handle) - email@email_client.com
+* Cristian Reyes - [@twitter_handle](https://twitter.com/twitter_handle) - Cristiareyes6777@gmail.com
 * Motty Mandel - [@twitter_handle](https://twitter.com/twitter_handle) - mandelmotty65@gmail.com
 
 Project Link: [https://github.com/SporeSun/sporesun-sporeshop](https://github.com/SporeSun/sporesun-sporeshop)
@@ -222,7 +222,7 @@ Project Link: [https://github.com/SporeSun/sporesun-sporeshop](https://github.co
 [linkedin1-url]: https://linkedin.com/in/neil-holloway-9258b471
 [linkedin2-url]: https://www.linkedin.com/in/motty-mandel-7216651a1
 [linkedin3-url]: https://linkedin.com/in/neil-holloway-9258b471
-[linkedin4-url]: https://linkedin.com/in/neil-holloway-9258b471
+[linkedin4-url]: https://www.linkedin.com/in/cristian-estiben-reyes
 [product-screenshot]: https://i.imgur.com/gHHB6kt.png
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
 [React-url]: https://reactjs.org/
