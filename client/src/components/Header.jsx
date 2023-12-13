@@ -34,7 +34,7 @@ const Header = () => {
     event.preventDefault();
     Auth.logout();
   };
-
+  let qty = 0;
   //destructuring cart items
   console.log("llllllllllllllllll", cartItems)
 
