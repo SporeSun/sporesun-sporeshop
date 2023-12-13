@@ -4,10 +4,10 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url]
-[![LinkedIn1][linkedin-shield]][linkedin1-url]
-[![LinkedIn2][linkedin-shield]][linkedin2-url]
-[![LinkedIn3][linkedin-shield]][linkedin3-url]
-[![LinkedIn4][linkedin-shield]][linkedin4-url]
+[![LinkedIn1][linkedin-shield1]][linkedin1-url]
+[![LinkedIn2][linkedin-shield2]][linkedin2-url]
+[![LinkedIn3][linkedin-shield3]][linkedin3-url]
+[![LinkedIn4][linkedin-shield4]][linkedin4-url]
 
 
 
@@ -180,7 +180,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 * Neil Holloway - [@twitter_handle](https://twitter.com/SporeSunEnt) - sporesun@protonmail.com
 * Devin Amlen - [@twitter_handle](https://twitter.com/twitter_handle) - email@email_client.com
 * Cristian Reyes - [@twitter_handle](https://twitter.com/twitter_handle) - email@email_client.com
-* Motty Mandel - [@twitter_handle](https://twitter.com/twitter_handle) - email@email_client.com
+* Motty Mandel - [@twitter_handle](https://twitter.com/twitter_handle) - mandelmotty65@gmail.com
 
 Project Link: [https://github.com/SporeSun/sporesun-sporeshop](https://github.com/SporeSun/sporesun-sporeshop)
 
@@ -211,7 +211,10 @@ Project Link: [https://github.com/SporeSun/sporesun-sporeshop](https://github.co
 [issues-url]: https://img.shields.io/github/license/SporeSun/sporesun-sporeshop/issues
 [license-shield]: https://img.shields.io/github/license/SporeSun/sporesun-sporeshop.svg?style=for-the-badge
 [license-url]: https://github.com/SporeSun/sporesun-sporeshop/blob/main/LICENSE
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
+[linkedin-shield1]: https://img.shields.io/badge/-Neil%20Holloway-black.svg?style=for-the-badge&logo=linkedin&colorB=555
+[linkedin-shield2]: https://img.shields.io/badge/-Motty%20Mandel-black.svg?style=for-the-badge&logo=Motty&colorB=555
+[linkedin-shield3]: https://img.shields.io/badge/-Devin%20Amlen-black.svg?style=for-the-badge&logo=linkedin&colorB=555
+[linkedin-shield4]: https://img.shields.io/badge/-Cristian%20Reyes-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin1-url]: https://linkedin.com/in/neil-holloway-9258b471
 [linkedin2-url]: https://www.linkedin.com/in/motty-mandel-7216651a1
 [linkedin3-url]: https://linkedin.com/in/neil-holloway-9258b471
