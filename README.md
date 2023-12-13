@@ -212,7 +212,7 @@ Project Link: [https://github.com/SporeSun/sporesun-sporeshop](https://github.co
 [license-shield]: https://img.shields.io/github/license/SporeSun/sporesun-sporeshop.svg?style=for-the-badge
 [license-url]: https://github.com/SporeSun/sporesun-sporeshop/blob/main/LICENSE
 [linkedin-shield1]: https://img.shields.io/badge/-Neil%20Holloway-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-shield2]: https://img.shields.io/badge/-Motty%20Mandel-black.svg?style=for-the-badge&logo=Motty&colorB=555
+[linkedin-shield2]: https://img.shields.io/badge/-Motty%20Mandel-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-shield3]: https://img.shields.io/badge/-Devin%20Amlen-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-shield4]: https://img.shields.io/badge/-Cristian%20Reyes-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin1-url]: https://linkedin.com/in/neil-holloway-9258b471
