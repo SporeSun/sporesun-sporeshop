@@ -1,53 +1,36 @@
-
-<!-- Improved compatibility of back to top link: See: https://github.com/othneildrew/Best-README-Template/pull/73 -->
 <a name="readme-top"></a>
-<!--
-*** Thanks for checking out the Best-README-Template. If you have a suggestion
-*** that would make this better, please fork the repo and create a pull request
-*** or simply open an issue with the tag "enhancement".
-*** Don't forget to give the project a star!
-*** Thanks again! Now go create something AMAZING! :D
--->
-
-
-
-<!-- PROJECT SHIELDS -->
-<!--
-*** I'm using markdown "reference style" links for readability.
-*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
-*** See the bottom of this document for the declaration of the reference variables
-*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
-*** https://www.markdownguide.org/basic-syntax/#reference-style-links
--->
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
+[![LinkedIn1][linkedin-shield]][linkedin1-url]
+[![LinkedIn2][linkedin-shield]][linkedin2-url]
+[![LinkedIn3][linkedin-shield]][linkedin3-url]
+[![LinkedIn4][linkedin-shield]][linkedin4-url]
 
 
 
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/github_username/repo_name">
+  <a href="https://github.com/SporeSun/sporesun-sporeshop">
     <img src="https://i.imgur.com/4IjYbdj.png" alt="Logo" width="200" height="200">
   </a>
 
 <h3 align="center">Spores 'n' More</h3>
 
   <p align="center">
-    project_description
+    Spores ‘n more is a full-stack MERN webshop dedicated to the growth and upkeep of mycological and permaculture endeavors.
     <br />
-    <a href="https://github.com/github_username/repo_name"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/SporeSun/sporesun-sporeshop"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/github_username/repo_name">View Demo</a>
+    <a href="https://sporeshop.onrender.com">View Demo</a>
     ·
-    <a href="https://github.com/github_username/repo_name/issues">Report Bug</a>
+    <a href="https://github.com/SporeSun/sporesun-sporeshop/issues">Report Bug</a>
     ·
-    <a href="https://github.com/github_username/repo_name/issues">Request Feature</a>
+    <a href="https://github.com/SporeSun/sporesun-sporeshop/issues">Request Feature</a>
   </p>
 </div>
 
@@ -84,10 +67,10 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+[![Product Name Screen Shot][product-screenshot]](https://sporeshop.onrender.com)
 
-Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `github_username`, `repo_name`, `twitter_handle`, `linkedin_username`, `email_client`, `email`, `project_title`, `project_description`
-
+Have you ever needed to find the things necessary for a full permaculture operation? Spores ‘N’ More can help the budding mycologist and permaculturist find plants, live gourmet, medicinal, and novelty mushroom cultures, and help train oneself in microscopic spore identification of psilocybin-containing species. Spores ‘N’ More is your one-stop shop for fantastic fungi cultures, both production species and native clones, native, food, sacred plants, and mycological laboratory supplies
+y
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
@@ -116,27 +99,26 @@ To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
+Install MongoDB from the MongoDB website. Set up your local server. Everything else is handled by Node.js
 
 ### Installation
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
+1. Clone the repo
    ```sh
-   git clone https://github.com/github_username/repo_name.git
+   git clone https://github.com/SporeSun/sporesun-sporeshop.git
    ```
-3. Install NPM packages
+2. Install NPM packages
    ```sh
    npm install
    ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
-   ```
+3. Seed the database
+  ```sh
+  npm run seed
+  ```
+4. Initiate the application
+  ```sh
+  npm run develop
+  ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -145,9 +127,9 @@ This is an example of how to list things you need to use the software and how to
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+The shop itself is already deployed here. You can purchase fungal spores for microscopy, live gourmet, medicinal, and novelty fungal cultures for cultivation, lab supplies for cultivation, and plants and seeds for the permaculturist.
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+https://sporeshop.onrender.com
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -156,10 +138,10 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 <!-- ROADMAP -->
 ## Roadmap
 
-- [ ] Feature 1
-- [ ] Feature 2
-- [ ] Feature 3
-    - [ ] Nested Feature
+- Integrate Shippo or EasyPost to calculate and include shipping at checkout and to automatically generate shipping labels
+- Link to calendly post-purchase for education offerings
+- Add blog for free tutorials and company updates
+- Expand product lineup
 
 See the [open issues](https://github.com/github_username/repo_name/issues) for a full list of proposed features (and known issues).
 
@@ -224,16 +206,19 @@ Project Link: [https://github.com/SporeSun/sporesun-sporeshop](https://github.co
 [contributors-shield]: https://img.shields.io/github/contributors/SporeSun/sporesun-sporeshop.svg?style=for-the-badge
 [contributors-url]: https://github.com/SporeSun/sporesun-sporeshop/graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/SporeSun/sporesun-sporeshop.svg?style=for-the-badge
-[forks-url]: https://github.com/github_username/repo_name/network/members
+[forks-url]: https://github.com/SporeSun/sporesun-sporeshop/network/members
 [stars-shield]: https://img.shields.io/github/stars/SporeSun/sporesun-sporeshop.svg?style=for-the-badge
 [stars-url]: https://github.com/SporeSun/sporesun-sporeshop/stargazers
 [issues-shield]: https://img.shields.io/github/issues/SporeSun/sporesun-sporeshop.svg?style=for-the-badge
-[issues-url]: https://github.com/github_username/repo_name/issues
+[issues-url]: https://img.shields.io/github/license/SporeSun/sporesun-sporeshop/issues
 [license-shield]: https://img.shields.io/github/license/SporeSun/sporesun-sporeshop.svg?style=for-the-badge
-[license-url]: https://github.com/SporeSun/sporesun-sporeshop/blob/master/LICENSE.txt
+[license-url]: https://github.com/SporeSun/sporesun-sporeshop/blob/main/LICENSE
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/neil-holloway-9258b471
-[product-screenshot]: images/screenshot.png
+[linkedin1-url]: https://linkedin.com/in/neil-holloway-9258b471
+[linkedin2-url]: https://www.linkedin.com/in/motty-mandel-7216651a1
+[linkedin3-url]: https://linkedin.com/in/neil-holloway-9258b471
+[linkedin4-url]: https://linkedin.com/in/neil-holloway-9258b471
+[product-screenshot]: https://i.imgur.com/gHHB6kt.png
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
 [React-url]: https://reactjs.org/
 [Vite.js]: https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white
